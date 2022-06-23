@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+	reactStrictMode: true,
+	images: {
+		domains: ['apiv3.bookphysio.com'],
+	},
+};
 
-module.exports = nextConfig
+export default nextConfig;

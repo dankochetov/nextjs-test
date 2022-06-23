@@ -1,0 +1,4392 @@
+"""ISO8601 Date values"""
+scalar Date
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+type Mutation {
+  create_appointments_item(data: create_appointments_input!): appointments
+  create_appointments_items(data: [create_appointments_input!], filter: appointments_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [appointments]
+  create_articles_content_creators_2_item(data: create_articles_content_creators_2_input!): articles_content_creators_2
+  create_articles_content_creators_2_items(data: [create_articles_content_creators_2_input!], filter: articles_content_creators_2_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_2]
+  create_articles_content_creators_3_item(data: create_articles_content_creators_3_input!): articles_content_creators_3
+  create_articles_content_creators_3_items(data: [create_articles_content_creators_3_input!], filter: articles_content_creators_3_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_3]
+  create_articles_content_creators_4_item(data: create_articles_content_creators_4_input!): articles_content_creators_4
+  create_articles_content_creators_4_items(data: [create_articles_content_creators_4_input!], filter: articles_content_creators_4_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_4]
+  create_articles_item(data: create_articles_input!): articles
+  create_articles_items(data: [create_articles_input!], filter: articles_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles]
+  create_availability_pages_item(data: create_availability_pages_input!): availability_pages
+  create_availability_pages_items(data: [create_availability_pages_input!], filter: availability_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [availability_pages]
+  create_booking_pages_item(data: create_booking_pages_input!): booking_pages
+  create_booking_pages_items(data: [create_booking_pages_input!], filter: booking_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [booking_pages]
+  create_cities_item(data: create_cities_input!): cities
+  create_cities_items(data: [create_cities_input!], filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [cities]
+  create_clinics_item(data: create_clinics_input!): clinics
+  create_clinics_items(data: [create_clinics_input!], filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics]
+  create_clinics_owners_item(data: create_clinics_owners_input!): clinics_owners
+  create_clinics_owners_items(data: [create_clinics_owners_input!], filter: clinics_owners_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_owners]
+  create_clinics_practitioners_clinics_item(data: create_clinics_practitioners_clinics_input!): clinics_practitioners_clinics
+  create_clinics_practitioners_clinics_items(data: [create_clinics_practitioners_clinics_input!], filter: clinics_practitioners_clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_practitioners_clinics]
+  create_clinics_practitioners_item(data: create_clinics_practitioners_input!): clinics_practitioners
+  create_clinics_practitioners_items(data: [create_clinics_practitioners_input!], filter: clinics_practitioners_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_practitioners]
+  create_content_creators_item(data: create_content_creators_input!): content_creators
+  create_content_creators_items(data: [create_content_creators_input!], filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [content_creators]
+  create_countries_item(data: create_countries_input!): countries
+  create_countries_items(data: [create_countries_input!], filter: countries_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [countries]
+  create_faqs_item(data: create_faqs_input!): faqs
+  create_faqs_items(data: [create_faqs_input!], filter: faqs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [faqs]
+  create_i18n_locales_item(data: create_i18n_locales_input!): i18n_locales
+  create_i18n_locales_items(data: [create_i18n_locales_input!], filter: i18n_locales_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [i18n_locales]
+  create_invoices_item(data: create_invoices_input!): invoices
+  create_invoices_items(data: [create_invoices_input!], filter: invoices_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [invoices]
+  create_pages_item(data: create_pages_input!): pages
+  create_pages_items(data: [create_pages_input!], filter: pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [pages]
+  create_posts_item(data: create_posts_input!): posts
+  create_posts_items(data: [create_posts_input!], filter: posts_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [posts]
+  create_publishers_item(data: create_publishers_input!): publishers
+  create_publishers_items(data: [create_publishers_input!], filter: publishers_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [publishers]
+  create_redirects_item(data: create_redirects_input!): redirects
+  create_redirects_items(data: [create_redirects_input!], filter: redirects_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [redirects]
+  create_seopage_links_item(data: create_seopage_links_input!): seopage_links
+  create_seopage_links_items(data: [create_seopage_links_input!], filter: seopage_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [seopage_links]
+  create_sitemap_page_sections_item(data: create_sitemap_page_sections_input!): sitemap_page_sections
+  create_sitemap_page_sections_items(data: [create_sitemap_page_sections_input!], filter: sitemap_page_sections_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_page_sections]
+  create_sitemap_pages_item(data: create_sitemap_pages_input!): sitemap_pages
+  create_sitemap_pages_items(data: [create_sitemap_pages_input!], filter: sitemap_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_pages]
+  create_sitemap_section_links_item(data: create_sitemap_section_links_input!): sitemap_section_links
+  create_sitemap_section_links_items(data: [create_sitemap_section_links_input!], filter: sitemap_section_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_section_links]
+  create_states_item(data: create_states_input!): states
+  create_states_items(data: [create_states_input!], filter: states_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [states]
+  create_suburbs_item(data: create_suburbs_input!): suburbs
+  create_suburbs_items(data: [create_suburbs_input!], filter: suburbs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [suburbs]
+  create_tokens_item(data: create_tokens_input!): tokens
+  create_tokens_items(data: [create_tokens_input!], filter: tokens_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [tokens]
+  create_upload_file_item(data: create_upload_file_input!): upload_file
+  create_upload_file_items(data: [create_upload_file_input!], filter: upload_file_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [upload_file]
+  create_upload_file_morph_item(data: create_upload_file_morph_input!): upload_file_morph
+  create_upload_file_morph_items(data: [create_upload_file_morph_input!], filter: upload_file_morph_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [upload_file_morph]
+  delete_appointments_item(id: ID!): delete_one
+  delete_appointments_items(ids: [ID]!): delete_many
+  delete_articles_content_creators_2_item(id: ID!): delete_one
+  delete_articles_content_creators_2_items(ids: [ID]!): delete_many
+  delete_articles_content_creators_3_item(id: ID!): delete_one
+  delete_articles_content_creators_3_items(ids: [ID]!): delete_many
+  delete_articles_content_creators_4_item(id: ID!): delete_one
+  delete_articles_content_creators_4_items(ids: [ID]!): delete_many
+  delete_articles_item(id: ID!): delete_one
+  delete_articles_items(ids: [ID]!): delete_many
+  delete_availability_pages_item(id: ID!): delete_one
+  delete_availability_pages_items(ids: [ID]!): delete_many
+  delete_booking_pages_item(id: ID!): delete_one
+  delete_booking_pages_items(ids: [ID]!): delete_many
+  delete_cities_item(id: ID!): delete_one
+  delete_cities_items(ids: [ID]!): delete_many
+  delete_clinics_item(id: ID!): delete_one
+  delete_clinics_items(ids: [ID]!): delete_many
+  delete_clinics_owners_item(id: ID!): delete_one
+  delete_clinics_owners_items(ids: [ID]!): delete_many
+  delete_clinics_practitioners_clinics_item(id: ID!): delete_one
+  delete_clinics_practitioners_clinics_items(ids: [ID]!): delete_many
+  delete_clinics_practitioners_item(id: ID!): delete_one
+  delete_clinics_practitioners_items(ids: [ID]!): delete_many
+  delete_content_creators_item(id: ID!): delete_one
+  delete_content_creators_items(ids: [ID]!): delete_many
+  delete_countries_item(id: ID!): delete_one
+  delete_countries_items(ids: [ID]!): delete_many
+  delete_faqs_item(id: ID!): delete_one
+  delete_faqs_items(ids: [ID]!): delete_many
+  delete_i18n_locales_item(id: ID!): delete_one
+  delete_i18n_locales_items(ids: [ID]!): delete_many
+  delete_invoices_item(id: ID!): delete_one
+  delete_invoices_items(ids: [ID]!): delete_many
+  delete_pages_item(id: ID!): delete_one
+  delete_pages_items(ids: [ID]!): delete_many
+  delete_posts_item(id: ID!): delete_one
+  delete_posts_items(ids: [ID]!): delete_many
+  delete_publishers_item(id: ID!): delete_one
+  delete_publishers_items(ids: [ID]!): delete_many
+  delete_redirects_item(id: ID!): delete_one
+  delete_redirects_items(ids: [ID]!): delete_many
+  delete_seopage_links_item(id: ID!): delete_one
+  delete_seopage_links_items(ids: [ID]!): delete_many
+  delete_sitemap_page_sections_item(id: ID!): delete_one
+  delete_sitemap_page_sections_items(ids: [ID]!): delete_many
+  delete_sitemap_pages_item(id: ID!): delete_one
+  delete_sitemap_pages_items(ids: [ID]!): delete_many
+  delete_sitemap_section_links_item(id: ID!): delete_one
+  delete_sitemap_section_links_items(ids: [ID]!): delete_many
+  delete_states_item(id: ID!): delete_one
+  delete_states_items(ids: [ID]!): delete_many
+  delete_suburbs_item(id: ID!): delete_one
+  delete_suburbs_items(ids: [ID]!): delete_many
+  delete_tokens_item(id: ID!): delete_one
+  delete_tokens_items(ids: [ID]!): delete_many
+  delete_upload_file_item(id: ID!): delete_one
+  delete_upload_file_items(ids: [ID]!): delete_many
+  delete_upload_file_morph_item(id: ID!): delete_one
+  delete_upload_file_morph_items(ids: [ID]!): delete_many
+  update_appointments_item(data: update_appointments_input!, id: ID!): appointments
+  update_appointments_items(data: update_appointments_input!, filter: appointments_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [appointments]
+  update_articles_content_creators_2_item(data: update_articles_content_creators_2_input!, id: ID!): articles_content_creators_2
+  update_articles_content_creators_2_items(data: update_articles_content_creators_2_input!, filter: articles_content_creators_2_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_2]
+  update_articles_content_creators_3_item(data: update_articles_content_creators_3_input!, id: ID!): articles_content_creators_3
+  update_articles_content_creators_3_items(data: update_articles_content_creators_3_input!, filter: articles_content_creators_3_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_3]
+  update_articles_content_creators_4_item(data: update_articles_content_creators_4_input!, id: ID!): articles_content_creators_4
+  update_articles_content_creators_4_items(data: update_articles_content_creators_4_input!, filter: articles_content_creators_4_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_4]
+  update_articles_item(data: update_articles_input!, id: ID!): articles
+  update_articles_items(data: update_articles_input!, filter: articles_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles]
+  update_availability_pages_item(data: update_availability_pages_input!, id: ID!): availability_pages
+  update_availability_pages_items(data: update_availability_pages_input!, filter: availability_pages_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [availability_pages]
+  update_booking_pages_item(data: update_booking_pages_input!, id: ID!): booking_pages
+  update_booking_pages_items(data: update_booking_pages_input!, filter: booking_pages_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [booking_pages]
+  update_cities_item(data: update_cities_input!, id: ID!): cities
+  update_cities_items(data: update_cities_input!, filter: cities_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [cities]
+  update_clinics_item(data: update_clinics_input!, id: ID!): clinics
+  update_clinics_items(data: update_clinics_input!, filter: clinics_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics]
+  update_clinics_owners_item(data: update_clinics_owners_input!, id: ID!): clinics_owners
+  update_clinics_owners_items(data: update_clinics_owners_input!, filter: clinics_owners_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_owners]
+  update_clinics_practitioners_clinics_item(data: update_clinics_practitioners_clinics_input!, id: ID!): clinics_practitioners_clinics
+  update_clinics_practitioners_clinics_items(data: update_clinics_practitioners_clinics_input!, filter: clinics_practitioners_clinics_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_practitioners_clinics]
+  update_clinics_practitioners_item(data: update_clinics_practitioners_input!, id: ID!): clinics_practitioners
+  update_clinics_practitioners_items(data: update_clinics_practitioners_input!, filter: clinics_practitioners_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_practitioners]
+  update_content_creators_item(data: update_content_creators_input!, id: ID!): content_creators
+  update_content_creators_items(data: update_content_creators_input!, filter: content_creators_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [content_creators]
+  update_countries_item(data: update_countries_input!, id: ID!): countries
+  update_countries_items(data: update_countries_input!, filter: countries_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [countries]
+  update_faqs_item(data: update_faqs_input!, id: ID!): faqs
+  update_faqs_items(data: update_faqs_input!, filter: faqs_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [faqs]
+  update_i18n_locales_item(data: update_i18n_locales_input!, id: ID!): i18n_locales
+  update_i18n_locales_items(data: update_i18n_locales_input!, filter: i18n_locales_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [i18n_locales]
+  update_invoices_item(data: update_invoices_input!, id: ID!): invoices
+  update_invoices_items(data: update_invoices_input!, filter: invoices_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [invoices]
+  update_pages_item(data: update_pages_input!, id: ID!): pages
+  update_pages_items(data: update_pages_input!, filter: pages_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [pages]
+  update_posts_item(data: update_posts_input!, id: ID!): posts
+  update_posts_items(data: update_posts_input!, filter: posts_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [posts]
+  update_publishers_item(data: update_publishers_input!, id: ID!): publishers
+  update_publishers_items(data: update_publishers_input!, filter: publishers_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [publishers]
+  update_redirects_item(data: update_redirects_input!, id: ID!): redirects
+  update_redirects_items(data: update_redirects_input!, filter: redirects_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [redirects]
+  update_seopage_links_item(data: update_seopage_links_input!, id: ID!): seopage_links
+  update_seopage_links_items(data: update_seopage_links_input!, filter: seopage_links_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [seopage_links]
+  update_sitemap_page_sections_item(data: update_sitemap_page_sections_input!, id: ID!): sitemap_page_sections
+  update_sitemap_page_sections_items(data: update_sitemap_page_sections_input!, filter: sitemap_page_sections_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_page_sections]
+  update_sitemap_pages_item(data: update_sitemap_pages_input!, id: ID!): sitemap_pages
+  update_sitemap_pages_items(data: update_sitemap_pages_input!, filter: sitemap_pages_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_pages]
+  update_sitemap_section_links_item(data: update_sitemap_section_links_input!, id: ID!): sitemap_section_links
+  update_sitemap_section_links_items(data: update_sitemap_section_links_input!, filter: sitemap_section_links_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_section_links]
+  update_states_item(data: update_states_input!, id: ID!): states
+  update_states_items(data: update_states_input!, filter: states_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [states]
+  update_suburbs_item(data: update_suburbs_input!, id: ID!): suburbs
+  update_suburbs_items(data: update_suburbs_input!, filter: suburbs_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [suburbs]
+  update_tokens_item(data: update_tokens_input!, id: ID!): tokens
+  update_tokens_items(data: update_tokens_input!, filter: tokens_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [tokens]
+  update_upload_file_item(data: update_upload_file_input!, id: ID!): upload_file
+  update_upload_file_items(data: update_upload_file_input!, filter: upload_file_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [upload_file]
+  update_upload_file_morph_item(data: update_upload_file_morph_input!, id: ID!): upload_file_morph
+  update_upload_file_morph_items(data: update_upload_file_morph_input!, filter: upload_file_morph_filter, ids: [ID]!, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [upload_file_morph]
+}
+
+type Query {
+  appointments(filter: appointments_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [appointments]
+  appointments_aggregated(filter: appointments_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [appointments_aggregated]
+  appointments_by_id(id: ID!): appointments
+  articles(filter: articles_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles]
+  articles_aggregated(filter: articles_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [articles_aggregated]
+  articles_by_id(id: ID!): articles
+  articles_content_creators_2(filter: articles_content_creators_2_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_2]
+  articles_content_creators_2_aggregated(filter: articles_content_creators_2_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [articles_content_creators_2_aggregated]
+  articles_content_creators_2_by_id(id: ID!): articles_content_creators_2
+  articles_content_creators_3(filter: articles_content_creators_3_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_3]
+  articles_content_creators_3_aggregated(filter: articles_content_creators_3_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [articles_content_creators_3_aggregated]
+  articles_content_creators_3_by_id(id: ID!): articles_content_creators_3
+  articles_content_creators_4(filter: articles_content_creators_4_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_4]
+  articles_content_creators_4_aggregated(filter: articles_content_creators_4_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [articles_content_creators_4_aggregated]
+  articles_content_creators_4_by_id(id: ID!): articles_content_creators_4
+  availability_pages(filter: availability_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [availability_pages]
+  availability_pages_aggregated(filter: availability_pages_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [availability_pages_aggregated]
+  availability_pages_by_id(id: ID!): availability_pages
+  booking_pages(filter: booking_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [booking_pages]
+  booking_pages_aggregated(filter: booking_pages_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [booking_pages_aggregated]
+  booking_pages_by_id(id: ID!): booking_pages
+  cities(filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [cities]
+  cities_aggregated(filter: cities_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [cities_aggregated]
+  cities_by_id(id: ID!): cities
+  clinics(filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics]
+  clinics_aggregated(filter: clinics_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [clinics_aggregated]
+  clinics_by_id(id: ID!): clinics
+  clinics_owners(filter: clinics_owners_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_owners]
+  clinics_owners_aggregated(filter: clinics_owners_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [clinics_owners_aggregated]
+  clinics_owners_by_id(id: ID!): clinics_owners
+  clinics_practitioners(filter: clinics_practitioners_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_practitioners]
+  clinics_practitioners_aggregated(filter: clinics_practitioners_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [clinics_practitioners_aggregated]
+  clinics_practitioners_by_id(id: ID!): clinics_practitioners
+  clinics_practitioners_clinics(filter: clinics_practitioners_clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_practitioners_clinics]
+  clinics_practitioners_clinics_aggregated(filter: clinics_practitioners_clinics_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [clinics_practitioners_clinics_aggregated]
+  clinics_practitioners_clinics_by_id(id: ID!): clinics_practitioners_clinics
+  content_creators(filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [content_creators]
+  content_creators_aggregated(filter: content_creators_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [content_creators_aggregated]
+  content_creators_by_id(id: ID!): content_creators
+  countries(filter: countries_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [countries]
+  countries_aggregated(filter: countries_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [countries_aggregated]
+  countries_by_id(id: ID!): countries
+  faqs(filter: faqs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [faqs]
+  faqs_aggregated(filter: faqs_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [faqs_aggregated]
+  faqs_by_id(id: ID!): faqs
+  i18n_locales(filter: i18n_locales_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [i18n_locales]
+  i18n_locales_aggregated(filter: i18n_locales_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [i18n_locales_aggregated]
+  i18n_locales_by_id(id: ID!): i18n_locales
+  invoices(filter: invoices_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [invoices]
+  invoices_aggregated(filter: invoices_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [invoices_aggregated]
+  invoices_by_id(id: ID!): invoices
+  pages(filter: pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [pages]
+  pages_aggregated(filter: pages_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [pages_aggregated]
+  pages_by_id(id: ID!): pages
+  posts(filter: posts_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [posts]
+  posts_aggregated(filter: posts_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [posts_aggregated]
+  posts_by_id(id: ID!): posts
+  publishers(filter: publishers_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [publishers]
+  publishers_aggregated(filter: publishers_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [publishers_aggregated]
+  publishers_by_id(id: ID!): publishers
+  redirects(filter: redirects_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [redirects]
+  redirects_aggregated(filter: redirects_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [redirects_aggregated]
+  redirects_by_id(id: ID!): redirects
+  seopage_links(filter: seopage_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [seopage_links]
+  seopage_links_aggregated(filter: seopage_links_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [seopage_links_aggregated]
+  seopage_links_by_id(id: ID!): seopage_links
+  sitemap_page_sections(filter: sitemap_page_sections_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_page_sections]
+  sitemap_page_sections_aggregated(filter: sitemap_page_sections_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [sitemap_page_sections_aggregated]
+  sitemap_page_sections_by_id(id: ID!): sitemap_page_sections
+  sitemap_pages(filter: sitemap_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_pages]
+  sitemap_pages_aggregated(filter: sitemap_pages_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [sitemap_pages_aggregated]
+  sitemap_pages_by_id(id: ID!): sitemap_pages
+  sitemap_section_links(filter: sitemap_section_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_section_links]
+  sitemap_section_links_aggregated(filter: sitemap_section_links_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [sitemap_section_links_aggregated]
+  sitemap_section_links_by_id(id: ID!): sitemap_section_links
+  states(filter: states_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [states]
+  states_aggregated(filter: states_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [states_aggregated]
+  states_by_id(id: ID!): states
+  suburbs(filter: suburbs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [suburbs]
+  suburbs_aggregated(filter: suburbs_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [suburbs_aggregated]
+  suburbs_by_id(id: ID!): suburbs
+  tokens(filter: tokens_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [tokens]
+  tokens_aggregated(filter: tokens_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [tokens_aggregated]
+  tokens_by_id(id: ID!): tokens
+  upload_file(filter: upload_file_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [upload_file]
+  upload_file_aggregated(filter: upload_file_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [upload_file_aggregated]
+  upload_file_by_id(id: ID!): upload_file
+  upload_file_morph(filter: upload_file_morph_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [upload_file_morph]
+  upload_file_morph_aggregated(filter: upload_file_morph_filter, groupBy: [String], limit: Int, search: String, sort: [String]): [upload_file_morph_aggregated]
+  upload_file_morph_by_id(id: ID!): upload_file_morph
+}
+
+type appointments {
+  cancelled: String
+  clinic(filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): clinics
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  did_not_arrive: Boolean
+  ends_at: Date
+  ends_at_func: datetime_functions
+  existing_patient: Boolean
+  id: ID
+  patient: String!
+  provider: String
+  provider_data: String
+  starts_at: Date
+  starts_at_func: datetime_functions
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type appointments_aggregated {
+  avg: appointments_aggregated_fields
+  avgDistinct: appointments_aggregated_fields
+  count: appointments_aggregated_count
+  countAll: Int
+  countDistinct: appointments_aggregated_fields
+  group: JSON
+  max: appointments_aggregated_fields
+  min: appointments_aggregated_fields
+  sum: appointments_aggregated_fields
+  sumDistinct: appointments_aggregated_fields
+}
+
+type appointments_aggregated_count {
+  cancelled: Int
+  clinic: Int
+  created_at: Int
+  created_by: Int
+  did_not_arrive: Int
+  ends_at: Int
+  existing_patient: Int
+  id: Int
+  patient: Int
+  provider: Int
+  provider_data: Int
+  starts_at: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type appointments_aggregated_fields {
+  clinic: Float
+  created_by: Float
+  id: Float
+  updated_by: Float
+}
+
+input appointments_filter {
+  _and: [appointments_filter]
+  _or: [appointments_filter]
+  cancelled: string_filter_operators
+  clinic: clinics_filter
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  did_not_arrive: boolean_filter_operators
+  ends_at: date_filter_operators
+  ends_at_func: datetime_function_filter_operators
+  existing_patient: boolean_filter_operators
+  id: number_filter_operators
+  patient: string_filter_operators
+  provider: string_filter_operators
+  provider_data: string_filter_operators
+  starts_at: date_filter_operators
+  starts_at_func: datetime_function_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type articles {
+  anchor_sitemap(filter: sitemap_section_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): sitemap_section_links
+  audience: JSON
+  audience_func: count_functions
+  authors(filter: articles_content_creators_2_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_2]
+  authors_func: count_functions
+  autoupdate_anchor: Boolean
+  categories: JSON
+  categories_func: count_functions
+  citations: JSON
+  citations_func: count_functions
+  content: String
+  contributed_at: Date
+  contributed_at_func: datetime_functions
+  contributors(filter: articles_content_creators_4_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_4]
+  contributors_func: count_functions
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  heading: String
+  id: ID
+  image(filter: directus_files_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_files
+  image_alt_text: String
+  is_archived: Boolean!
+  keywords: JSON
+  keywords_func: count_functions
+  last_reviewed: Date
+  last_reviewed_func: datetime_functions
+  markup_schema: JSON
+  markup_schema_func: count_functions
+  meta_description: String
+  meta_title: String
+  publisher(filter: publishers_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): publishers
+  reviewers(filter: articles_content_creators_3_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_3]
+  reviewers_func: count_functions
+  slug: String
+  sub_heading: String
+  table_of_contents: JSON
+  table_of_contents_func: count_functions
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type articles_aggregated {
+  avg: articles_aggregated_fields
+  avgDistinct: articles_aggregated_fields
+  count: articles_aggregated_count
+  countAll: Int
+  countDistinct: articles_aggregated_fields
+  group: JSON
+  max: articles_aggregated_fields
+  min: articles_aggregated_fields
+  sum: articles_aggregated_fields
+  sumDistinct: articles_aggregated_fields
+}
+
+type articles_aggregated_count {
+  anchor_sitemap: Int
+  audience: Int
+  authors: Int
+  autoupdate_anchor: Int
+  categories: Int
+  citations: Int
+  content: Int
+  contributed_at: Int
+  contributors: Int
+  created_at: Int
+  created_by: Int
+  heading: Int
+  id: Int
+  image: Int
+  image_alt_text: Int
+  is_archived: Int
+  keywords: Int
+  last_reviewed: Int
+  markup_schema: Int
+  meta_description: Int
+  meta_title: Int
+  publisher: Int
+  reviewers: Int
+  slug: Int
+  sub_heading: Int
+  table_of_contents: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type articles_aggregated_fields {
+  anchor_sitemap: Float
+  created_by: Float
+  id: Float
+  publisher: Float
+  updated_by: Float
+}
+
+type articles_content_creators_2 {
+  articles_id(filter: articles_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): articles
+  content_creators_id(filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): content_creators
+  id: ID
+}
+
+type articles_content_creators_2_aggregated {
+  avg: articles_content_creators_2_aggregated_fields
+  avgDistinct: articles_content_creators_2_aggregated_fields
+  count: articles_content_creators_2_aggregated_count
+  countAll: Int
+  countDistinct: articles_content_creators_2_aggregated_fields
+  group: JSON
+  max: articles_content_creators_2_aggregated_fields
+  min: articles_content_creators_2_aggregated_fields
+  sum: articles_content_creators_2_aggregated_fields
+  sumDistinct: articles_content_creators_2_aggregated_fields
+}
+
+type articles_content_creators_2_aggregated_count {
+  articles_id: Int
+  content_creators_id: Int
+  id: Int
+}
+
+type articles_content_creators_2_aggregated_fields {
+  articles_id: Float
+  content_creators_id: Float
+  id: Float
+}
+
+input articles_content_creators_2_filter {
+  _and: [articles_content_creators_2_filter]
+  _or: [articles_content_creators_2_filter]
+  articles_id: articles_filter
+  content_creators_id: content_creators_filter
+  id: number_filter_operators
+}
+
+type articles_content_creators_3 {
+  articles_id(filter: articles_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): articles
+  content_creators_id(filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): content_creators
+  id: ID
+}
+
+type articles_content_creators_3_aggregated {
+  avg: articles_content_creators_3_aggregated_fields
+  avgDistinct: articles_content_creators_3_aggregated_fields
+  count: articles_content_creators_3_aggregated_count
+  countAll: Int
+  countDistinct: articles_content_creators_3_aggregated_fields
+  group: JSON
+  max: articles_content_creators_3_aggregated_fields
+  min: articles_content_creators_3_aggregated_fields
+  sum: articles_content_creators_3_aggregated_fields
+  sumDistinct: articles_content_creators_3_aggregated_fields
+}
+
+type articles_content_creators_3_aggregated_count {
+  articles_id: Int
+  content_creators_id: Int
+  id: Int
+}
+
+type articles_content_creators_3_aggregated_fields {
+  articles_id: Float
+  content_creators_id: Float
+  id: Float
+}
+
+input articles_content_creators_3_filter {
+  _and: [articles_content_creators_3_filter]
+  _or: [articles_content_creators_3_filter]
+  articles_id: articles_filter
+  content_creators_id: content_creators_filter
+  id: number_filter_operators
+}
+
+type articles_content_creators_4 {
+  articles_id(filter: articles_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): articles
+  content_creators_id(filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): content_creators
+  id: ID
+}
+
+type articles_content_creators_4_aggregated {
+  avg: articles_content_creators_4_aggregated_fields
+  avgDistinct: articles_content_creators_4_aggregated_fields
+  count: articles_content_creators_4_aggregated_count
+  countAll: Int
+  countDistinct: articles_content_creators_4_aggregated_fields
+  group: JSON
+  max: articles_content_creators_4_aggregated_fields
+  min: articles_content_creators_4_aggregated_fields
+  sum: articles_content_creators_4_aggregated_fields
+  sumDistinct: articles_content_creators_4_aggregated_fields
+}
+
+type articles_content_creators_4_aggregated_count {
+  articles_id: Int
+  content_creators_id: Int
+  id: Int
+}
+
+type articles_content_creators_4_aggregated_fields {
+  articles_id: Float
+  content_creators_id: Float
+  id: Float
+}
+
+input articles_content_creators_4_filter {
+  _and: [articles_content_creators_4_filter]
+  _or: [articles_content_creators_4_filter]
+  articles_id: articles_filter
+  content_creators_id: content_creators_filter
+  id: number_filter_operators
+}
+
+input articles_filter {
+  _and: [articles_filter]
+  _or: [articles_filter]
+  anchor_sitemap: sitemap_section_links_filter
+  audience: string_filter_operators
+  audience_func: count_function_filter_operators
+  authors: articles_content_creators_2_filter
+  authors_func: count_function_filter_operators
+  autoupdate_anchor: boolean_filter_operators
+  categories: string_filter_operators
+  categories_func: count_function_filter_operators
+  citations: string_filter_operators
+  citations_func: count_function_filter_operators
+  content: string_filter_operators
+  contributed_at: date_filter_operators
+  contributed_at_func: datetime_function_filter_operators
+  contributors: articles_content_creators_4_filter
+  contributors_func: count_function_filter_operators
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  heading: string_filter_operators
+  id: number_filter_operators
+  image: directus_files_filter
+  image_alt_text: string_filter_operators
+  is_archived: boolean_filter_operators
+  keywords: string_filter_operators
+  keywords_func: count_function_filter_operators
+  last_reviewed: date_filter_operators
+  last_reviewed_func: datetime_function_filter_operators
+  markup_schema: string_filter_operators
+  markup_schema_func: count_function_filter_operators
+  meta_description: string_filter_operators
+  meta_title: string_filter_operators
+  publisher: publishers_filter
+  reviewers: articles_content_creators_3_filter
+  reviewers_func: count_function_filter_operators
+  slug: string_filter_operators
+  sub_heading: string_filter_operators
+  table_of_contents: string_filter_operators
+  table_of_contents_func: count_function_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type availability_pages {
+  FAQs(filter: faqs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [faqs]
+  FAQs_func: count_functions
+  about_bookphysio: String
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  id: ID
+  is_archived: Boolean
+  popular_links(filter: sitemap_section_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_section_links]
+  popular_links_func: count_functions
+  posts(filter: posts_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [posts]
+  posts_func: count_functions
+  slug: String
+}
+
+type availability_pages_aggregated {
+  avg: availability_pages_aggregated_fields
+  avgDistinct: availability_pages_aggregated_fields
+  count: availability_pages_aggregated_count
+  countAll: Int
+  countDistinct: availability_pages_aggregated_fields
+  group: JSON
+  max: availability_pages_aggregated_fields
+  min: availability_pages_aggregated_fields
+  sum: availability_pages_aggregated_fields
+  sumDistinct: availability_pages_aggregated_fields
+}
+
+type availability_pages_aggregated_count {
+  FAQs: Int
+  about_bookphysio: Int
+  date_created: Int
+  date_updated: Int
+  id: Int
+  is_archived: Int
+  popular_links: Int
+  posts: Int
+  slug: Int
+}
+
+type availability_pages_aggregated_fields {
+  id: Float
+}
+
+input availability_pages_filter {
+  FAQs: faqs_filter
+  FAQs_func: count_function_filter_operators
+  _and: [availability_pages_filter]
+  _or: [availability_pages_filter]
+  about_bookphysio: string_filter_operators
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  popular_links: sitemap_section_links_filter
+  popular_links_func: count_function_filter_operators
+  posts: posts_filter
+  posts_func: count_function_filter_operators
+  slug: string_filter_operators
+}
+
+type booking_pages {
+  FAQs(filter: faqs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [faqs]
+  FAQs_func: count_functions
+  Seo_page_links(filter: seopage_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [seopage_links]
+  Seo_page_links_func: count_functions
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  h1: String
+  h2: String
+  h3: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functions
+  meta_description: String
+  meta_title: String
+  posts(filter: posts_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [posts]
+  posts_func: count_functions
+  slug: String
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type booking_pages_aggregated {
+  avg: booking_pages_aggregated_fields
+  avgDistinct: booking_pages_aggregated_fields
+  count: booking_pages_aggregated_count
+  countAll: Int
+  countDistinct: booking_pages_aggregated_fields
+  group: JSON
+  max: booking_pages_aggregated_fields
+  min: booking_pages_aggregated_fields
+  sum: booking_pages_aggregated_fields
+  sumDistinct: booking_pages_aggregated_fields
+}
+
+type booking_pages_aggregated_count {
+  FAQs: Int
+  Seo_page_links: Int
+  created_at: Int
+  created_by: Int
+  h1: Int
+  h2: Int
+  h3: Int
+  id: Int
+  is_archived: Int
+  markup_schema: Int
+  meta_description: Int
+  meta_title: Int
+  posts: Int
+  slug: Int
+  sub_heading_text: Int
+  tick_1: Int
+  tick_2: Int
+  tick_3: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type booking_pages_aggregated_fields {
+  created_by: Float
+  id: Float
+  updated_by: Float
+}
+
+input booking_pages_filter {
+  FAQs: faqs_filter
+  FAQs_func: count_function_filter_operators
+  Seo_page_links: seopage_links_filter
+  Seo_page_links_func: count_function_filter_operators
+  _and: [booking_pages_filter]
+  _or: [booking_pages_filter]
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  h1: string_filter_operators
+  h2: string_filter_operators
+  h3: string_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  markup_schema: string_filter_operators
+  markup_schema_func: count_function_filter_operators
+  meta_description: string_filter_operators
+  meta_title: string_filter_operators
+  posts: posts_filter
+  posts_func: count_function_filter_operators
+  slug: string_filter_operators
+  sub_heading_text: string_filter_operators
+  tick_1: string_filter_operators
+  tick_2: string_filter_operators
+  tick_3: string_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+input boolean_filter_operators {
+  _eq: Boolean
+  _neq: Boolean
+  _nnull: Boolean
+  _null: Boolean
+}
+
+type cities {
+  Clinics(filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics]
+  Clinics_func: count_functions
+  FAQs(filter: faqs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [faqs]
+  FAQs_func: count_functions
+  Posts(filter: posts_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [posts]
+  Posts_func: count_functions
+  Seo_page_links(filter: seopage_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [seopage_links]
+  Seo_page_links_func: count_functions
+  Suburbs(filter: suburbs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [suburbs]
+  Suburbs_func: count_functions
+  about_bookphysio: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functions
+  content_creators(filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [content_creators]
+  content_creators_func: count_functions
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  h1: String
+  h2: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functions
+  meta_description: String
+  meta_title: String
+  name: String
+  slug: String!
+  state(filter: states_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): states
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  top_clinics: JSON
+  top_clinics_func: count_functions
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type cities_aggregated {
+  avg: cities_aggregated_fields
+  avgDistinct: cities_aggregated_fields
+  count: cities_aggregated_count
+  countAll: Int
+  countDistinct: cities_aggregated_fields
+  group: JSON
+  max: cities_aggregated_fields
+  min: cities_aggregated_fields
+  sum: cities_aggregated_fields
+  sumDistinct: cities_aggregated_fields
+}
+
+type cities_aggregated_count {
+  Clinics: Int
+  FAQs: Int
+  Posts: Int
+  Seo_page_links: Int
+  Suburbs: Int
+  about_bookphysio: Int
+  breadcrumbs: Int
+  content_creators: Int
+  created_at: Int
+  created_by: Int
+  h1: Int
+  h2: Int
+  id: Int
+  is_archived: Int
+  markup_schema: Int
+  meta_description: Int
+  meta_title: Int
+  name: Int
+  slug: Int
+  state: Int
+  sub_heading_text: Int
+  tick_1: Int
+  tick_2: Int
+  tick_3: Int
+  top_clinics: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type cities_aggregated_fields {
+  created_by: Float
+  id: Float
+  state: Float
+  updated_by: Float
+}
+
+input cities_filter {
+  Clinics: clinics_filter
+  Clinics_func: count_function_filter_operators
+  FAQs: faqs_filter
+  FAQs_func: count_function_filter_operators
+  Posts: posts_filter
+  Posts_func: count_function_filter_operators
+  Seo_page_links: seopage_links_filter
+  Seo_page_links_func: count_function_filter_operators
+  Suburbs: suburbs_filter
+  Suburbs_func: count_function_filter_operators
+  _and: [cities_filter]
+  _or: [cities_filter]
+  about_bookphysio: string_filter_operators
+  breadcrumbs: string_filter_operators
+  breadcrumbs_func: count_function_filter_operators
+  content_creators: content_creators_filter
+  content_creators_func: count_function_filter_operators
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  h1: string_filter_operators
+  h2: string_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  markup_schema: string_filter_operators
+  markup_schema_func: count_function_filter_operators
+  meta_description: string_filter_operators
+  meta_title: string_filter_operators
+  name: string_filter_operators
+  slug: string_filter_operators
+  state: states_filter
+  sub_heading_text: string_filter_operators
+  tick_1: string_filter_operators
+  tick_2: string_filter_operators
+  tick_3: string_filter_operators
+  top_clinics: string_filter_operators
+  top_clinics_func: count_function_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type clinics {
+  Appointments(filter: appointments_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [appointments]
+  Appointments_func: count_functions
+  about_clinic: String
+  active_appointment_types_count: Int
+  api_key: String
+  appointment_types: JSON
+  appointment_types_func: count_functions
+  chargebee_customer_id: String
+  city(filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): cities
+  clinic_booking_link: String
+  clinic_email: String
+  clinic_phone_number: String
+  clinic_practitioners(filter: clinics_practitioners_clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_practitioners_clinics]
+  clinic_practitioners_func: count_functions
+  connected_to_provider: Boolean
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  display_for_booking: Boolean
+  full_address: String
+  has_appointment_cost: Boolean
+  id: ID
+  id_from_provider: String
+  images_data: JSON
+  images_data_func: count_functions
+  invoices(filter: invoices_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [invoices]
+  invoices_func: count_functions
+  is_archived: Boolean
+  is_data_valid: Boolean
+  location: JSON
+  location_func: count_functions
+  logo(filter: directus_files_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_files
+  logo_alt_text: String
+  markup_schema: JSON
+  markup_schema_func: count_functions
+  meta_description: String
+  meta_title: String
+  name: String!
+
+  """Clinics that are within 5 km radius counting from clinic location"""
+  nearby_clinics: JSON
+  nearby_clinics_func: count_functions
+  nearby_suburbs: JSON
+  nearby_suburbs_func: count_functions
+  opening_hours: JSON
+  opening_hours_func: count_functions
+  owner(filter: clinics_owners_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): clinics_owners
+  pms: String
+  popular: Boolean
+  postcode: String
+  slug: String!
+  state(filter: states_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): states
+  suburb(filter: suburbs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): suburbs
+  team_image(filter: directus_files_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_files
+  team_image_alt_text: String
+  time_zone: String
+  typeform_registration_link: String
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+  use_test_chargebee: Boolean
+  validation_description: String
+  website: String
+}
+
+type clinics_aggregated {
+  avg: clinics_aggregated_fields
+  avgDistinct: clinics_aggregated_fields
+  count: clinics_aggregated_count
+  countAll: Int
+  countDistinct: clinics_aggregated_fields
+  group: JSON
+  max: clinics_aggregated_fields
+  min: clinics_aggregated_fields
+  sum: clinics_aggregated_fields
+  sumDistinct: clinics_aggregated_fields
+}
+
+type clinics_aggregated_count {
+  Appointments: Int
+  about_clinic: Int
+  active_appointment_types_count: Int
+  api_key: Int
+  appointment_types: Int
+  chargebee_customer_id: Int
+  city: Int
+  clinic_booking_link: Int
+  clinic_email: Int
+  clinic_phone_number: Int
+  clinic_practitioners: Int
+  connected_to_provider: Int
+  created_at: Int
+  created_by: Int
+  display_for_booking: Int
+  full_address: Int
+  has_appointment_cost: Int
+  id: Int
+  id_from_provider: Int
+  images_data: Int
+  invoices: Int
+  is_archived: Int
+  is_data_valid: Int
+  location: Int
+  logo: Int
+  logo_alt_text: Int
+  markup_schema: Int
+  meta_description: Int
+  meta_title: Int
+  name: Int
+
+  """Clinics that are within 5 km radius counting from clinic location"""
+  nearby_clinics: Int
+  nearby_suburbs: Int
+  opening_hours: Int
+  owner: Int
+  pms: Int
+  popular: Int
+  postcode: Int
+  slug: Int
+  state: Int
+  suburb: Int
+  team_image: Int
+  team_image_alt_text: Int
+  time_zone: Int
+  typeform_registration_link: Int
+  updated_at: Int
+  updated_by: Int
+  use_test_chargebee: Int
+  validation_description: Int
+  website: Int
+}
+
+type clinics_aggregated_fields {
+  active_appointment_types_count: Float
+  city: Float
+  created_by: Float
+  id: Float
+  owner: Float
+  state: Float
+  suburb: Float
+  updated_by: Float
+}
+
+input clinics_filter {
+  Appointments: appointments_filter
+  Appointments_func: count_function_filter_operators
+  _and: [clinics_filter]
+  _or: [clinics_filter]
+  about_clinic: string_filter_operators
+  active_appointment_types_count: number_filter_operators
+  api_key: string_filter_operators
+  appointment_types: string_filter_operators
+  appointment_types_func: count_function_filter_operators
+  chargebee_customer_id: string_filter_operators
+  city: cities_filter
+  clinic_booking_link: string_filter_operators
+  clinic_email: string_filter_operators
+  clinic_phone_number: string_filter_operators
+  clinic_practitioners: clinics_practitioners_clinics_filter
+  clinic_practitioners_func: count_function_filter_operators
+  connected_to_provider: boolean_filter_operators
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  display_for_booking: boolean_filter_operators
+  full_address: string_filter_operators
+  has_appointment_cost: boolean_filter_operators
+  id: number_filter_operators
+  id_from_provider: string_filter_operators
+  images_data: string_filter_operators
+  images_data_func: count_function_filter_operators
+  invoices: invoices_filter
+  invoices_func: count_function_filter_operators
+  is_archived: boolean_filter_operators
+  is_data_valid: boolean_filter_operators
+  location: string_filter_operators
+  location_func: count_function_filter_operators
+  logo: directus_files_filter
+  logo_alt_text: string_filter_operators
+  markup_schema: string_filter_operators
+  markup_schema_func: count_function_filter_operators
+  meta_description: string_filter_operators
+  meta_title: string_filter_operators
+  name: string_filter_operators
+  nearby_clinics: string_filter_operators
+  nearby_clinics_func: count_function_filter_operators
+  nearby_suburbs: string_filter_operators
+  nearby_suburbs_func: count_function_filter_operators
+  opening_hours: string_filter_operators
+  opening_hours_func: count_function_filter_operators
+  owner: clinics_owners_filter
+  pms: string_filter_operators
+  popular: boolean_filter_operators
+  postcode: string_filter_operators
+  slug: string_filter_operators
+  state: states_filter
+  suburb: suburbs_filter
+  team_image: directus_files_filter
+  team_image_alt_text: string_filter_operators
+  time_zone: string_filter_operators
+  typeform_registration_link: string_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+  use_test_chargebee: boolean_filter_operators
+  validation_description: string_filter_operators
+  website: string_filter_operators
+}
+
+type clinics_owners {
+  clinics(filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics]
+  clinics_func: count_functions
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  email: String
+  first_name: String
+  id: ID
+  last_name: String
+  notes: String
+  phone_number: String
+  sign_up_date: Date
+  sign_up_date_func: date_functions
+  title: String
+}
+
+type clinics_owners_aggregated {
+  avg: clinics_owners_aggregated_fields
+  avgDistinct: clinics_owners_aggregated_fields
+  count: clinics_owners_aggregated_count
+  countAll: Int
+  countDistinct: clinics_owners_aggregated_fields
+  group: JSON
+  max: clinics_owners_aggregated_fields
+  min: clinics_owners_aggregated_fields
+  sum: clinics_owners_aggregated_fields
+  sumDistinct: clinics_owners_aggregated_fields
+}
+
+type clinics_owners_aggregated_count {
+  clinics: Int
+  date_created: Int
+  date_updated: Int
+  email: Int
+  first_name: Int
+  id: Int
+  last_name: Int
+  notes: Int
+  phone_number: Int
+  sign_up_date: Int
+  title: Int
+}
+
+type clinics_owners_aggregated_fields {
+  id: Float
+}
+
+input clinics_owners_filter {
+  _and: [clinics_owners_filter]
+  _or: [clinics_owners_filter]
+  clinics: clinics_filter
+  clinics_func: count_function_filter_operators
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  email: string_filter_operators
+  first_name: string_filter_operators
+  id: number_filter_operators
+  last_name: string_filter_operators
+  notes: string_filter_operators
+  phone_number: string_filter_operators
+  sign_up_date: date_filter_operators
+  sign_up_date_func: date_function_filter_operators
+  title: string_filter_operators
+}
+
+type clinics_practitioners {
+  active: Boolean
+  available_for_bookings: Boolean
+  clinics(filter: clinics_practitioners_clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics_practitioners_clinics]
+  clinics_func: count_functions
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  first_name: String
+  gender: String
+  id: ID
+  last_name: String
+  provider_id: String
+  related_appointment_types: JSON
+  related_appointment_types_func: count_functions
+  speciality: String
+  title: String
+}
+
+type clinics_practitioners_aggregated {
+  avg: clinics_practitioners_aggregated_fields
+  avgDistinct: clinics_practitioners_aggregated_fields
+  count: clinics_practitioners_aggregated_count
+  countAll: Int
+  countDistinct: clinics_practitioners_aggregated_fields
+  group: JSON
+  max: clinics_practitioners_aggregated_fields
+  min: clinics_practitioners_aggregated_fields
+  sum: clinics_practitioners_aggregated_fields
+  sumDistinct: clinics_practitioners_aggregated_fields
+}
+
+type clinics_practitioners_aggregated_count {
+  active: Int
+  available_for_bookings: Int
+  clinics: Int
+  date_created: Int
+  date_updated: Int
+  first_name: Int
+  gender: Int
+  id: Int
+  last_name: Int
+  provider_id: Int
+  related_appointment_types: Int
+  speciality: Int
+  title: Int
+}
+
+type clinics_practitioners_aggregated_fields {
+  id: Float
+}
+
+type clinics_practitioners_clinics {
+  clinics_id(filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): clinics
+  clinics_practitioners_id(filter: clinics_practitioners_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): clinics_practitioners
+  id: ID
+}
+
+type clinics_practitioners_clinics_aggregated {
+  avg: clinics_practitioners_clinics_aggregated_fields
+  avgDistinct: clinics_practitioners_clinics_aggregated_fields
+  count: clinics_practitioners_clinics_aggregated_count
+  countAll: Int
+  countDistinct: clinics_practitioners_clinics_aggregated_fields
+  group: JSON
+  max: clinics_practitioners_clinics_aggregated_fields
+  min: clinics_practitioners_clinics_aggregated_fields
+  sum: clinics_practitioners_clinics_aggregated_fields
+  sumDistinct: clinics_practitioners_clinics_aggregated_fields
+}
+
+type clinics_practitioners_clinics_aggregated_count {
+  clinics_id: Int
+  clinics_practitioners_id: Int
+  id: Int
+}
+
+type clinics_practitioners_clinics_aggregated_fields {
+  clinics_id: Float
+  clinics_practitioners_id: Float
+  id: Float
+}
+
+input clinics_practitioners_clinics_filter {
+  _and: [clinics_practitioners_clinics_filter]
+  _or: [clinics_practitioners_clinics_filter]
+  clinics_id: clinics_filter
+  clinics_practitioners_id: clinics_practitioners_filter
+  id: number_filter_operators
+}
+
+input clinics_practitioners_filter {
+  _and: [clinics_practitioners_filter]
+  _or: [clinics_practitioners_filter]
+  active: boolean_filter_operators
+  available_for_bookings: boolean_filter_operators
+  clinics: clinics_practitioners_clinics_filter
+  clinics_func: count_function_filter_operators
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  first_name: string_filter_operators
+  gender: string_filter_operators
+  id: number_filter_operators
+  last_name: string_filter_operators
+  provider_id: string_filter_operators
+  related_appointment_types: string_filter_operators
+  related_appointment_types_func: count_function_filter_operators
+  speciality: string_filter_operators
+  title: string_filter_operators
+}
+
+type content_creators {
+  accomplishments: JSON
+  accomplishments_func: count_functions
+  areas_of_expertise: JSON
+  areas_of_expertise_func: count_functions
+  articles_authored(filter: articles_content_creators_2_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_2]
+  articles_authored_func: count_functions
+  articles_contributed(filter: articles_content_creators_4_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_4]
+  articles_contributed_func: count_functions
+  articles_reviewed(filter: articles_content_creators_3_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles_content_creators_3]
+  articles_reviewed_func: count_functions
+  certifications: JSON
+  certifications_func: count_functions
+  city(filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): cities
+  country(filter: countries_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): countries
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  degrees: JSON
+  degrees_func: count_functions
+  h1: String
+  h2: String
+  id: ID
+  linked_in: String
+  markup_schema: JSON
+  markup_schema_func: count_functions
+  medical_title: String
+  meta_description: String
+  meta_title: String
+  mini_description: String
+  name: String
+  profile: String
+  profile_picture(filter: directus_files_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_files
+  publisher(filter: publishers_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): publishers
+  slug: String
+  state(filter: states_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): states
+  user_created(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+  user_updated(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+  website: String
+}
+
+type content_creators_aggregated {
+  avg: content_creators_aggregated_fields
+  avgDistinct: content_creators_aggregated_fields
+  count: content_creators_aggregated_count
+  countAll: Int
+  countDistinct: content_creators_aggregated_fields
+  group: JSON
+  max: content_creators_aggregated_fields
+  min: content_creators_aggregated_fields
+  sum: content_creators_aggregated_fields
+  sumDistinct: content_creators_aggregated_fields
+}
+
+type content_creators_aggregated_count {
+  accomplishments: Int
+  areas_of_expertise: Int
+  articles_authored: Int
+  articles_contributed: Int
+  articles_reviewed: Int
+  certifications: Int
+  city: Int
+  country: Int
+  date_created: Int
+  date_updated: Int
+  degrees: Int
+  h1: Int
+  h2: Int
+  id: Int
+  linked_in: Int
+  markup_schema: Int
+  medical_title: Int
+  meta_description: Int
+  meta_title: Int
+  mini_description: Int
+  name: Int
+  profile: Int
+  profile_picture: Int
+  publisher: Int
+  slug: Int
+  state: Int
+  user_created: Int
+  user_updated: Int
+  website: Int
+}
+
+type content_creators_aggregated_fields {
+  city: Float
+  country: Float
+  id: Float
+  publisher: Float
+  state: Float
+}
+
+input content_creators_filter {
+  _and: [content_creators_filter]
+  _or: [content_creators_filter]
+  accomplishments: string_filter_operators
+  accomplishments_func: count_function_filter_operators
+  areas_of_expertise: string_filter_operators
+  areas_of_expertise_func: count_function_filter_operators
+  articles_authored: articles_content_creators_2_filter
+  articles_authored_func: count_function_filter_operators
+  articles_contributed: articles_content_creators_4_filter
+  articles_contributed_func: count_function_filter_operators
+  articles_reviewed: articles_content_creators_3_filter
+  articles_reviewed_func: count_function_filter_operators
+  certifications: string_filter_operators
+  certifications_func: count_function_filter_operators
+  city: cities_filter
+  country: countries_filter
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  degrees: string_filter_operators
+  degrees_func: count_function_filter_operators
+  h1: string_filter_operators
+  h2: string_filter_operators
+  id: number_filter_operators
+  linked_in: string_filter_operators
+  markup_schema: string_filter_operators
+  markup_schema_func: count_function_filter_operators
+  medical_title: string_filter_operators
+  meta_description: string_filter_operators
+  meta_title: string_filter_operators
+  mini_description: string_filter_operators
+  name: string_filter_operators
+  profile: string_filter_operators
+  profile_picture: directus_files_filter
+  publisher: publishers_filter
+  slug: string_filter_operators
+  state: states_filter
+  user_created: directus_users_filter
+  user_updated: directus_users_filter
+  website: string_filter_operators
+}
+
+input count_function_filter_operators {
+  count: number_filter_operators
+}
+
+type count_functions {
+  count: Int
+}
+
+input count_functionsInput {
+  count: Int
+}
+
+type countries {
+  content_creators(filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [content_creators]
+  content_creators_func: count_functions
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  id: ID
+  name: String
+  user_created(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+  user_updated(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+}
+
+type countries_aggregated {
+  avg: countries_aggregated_fields
+  avgDistinct: countries_aggregated_fields
+  count: countries_aggregated_count
+  countAll: Int
+  countDistinct: countries_aggregated_fields
+  group: JSON
+  max: countries_aggregated_fields
+  min: countries_aggregated_fields
+  sum: countries_aggregated_fields
+  sumDistinct: countries_aggregated_fields
+}
+
+type countries_aggregated_count {
+  content_creators: Int
+  date_created: Int
+  date_updated: Int
+  id: Int
+  name: Int
+  user_created: Int
+  user_updated: Int
+}
+
+type countries_aggregated_fields {
+  id: Float
+}
+
+input countries_filter {
+  _and: [countries_filter]
+  _or: [countries_filter]
+  content_creators: content_creators_filter
+  content_creators_func: count_function_filter_operators
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  id: number_filter_operators
+  name: string_filter_operators
+  user_created: directus_users_filter
+  user_updated: directus_users_filter
+}
+
+input create_appointments_input {
+  cancelled: String
+  clinic: create_clinics_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  did_not_arrive: Boolean
+  ends_at: Date
+  ends_at_func: datetime_functionsInput
+  existing_patient: Boolean
+  id: ID
+  patient: String!
+  provider: String
+  provider_data: String
+  starts_at: Date
+  starts_at_func: datetime_functionsInput
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_articles_content_creators_2_input {
+  articles_id: create_articles_input
+  content_creators_id: create_content_creators_input
+  id: ID
+}
+
+input create_articles_content_creators_3_input {
+  articles_id: create_articles_input
+  content_creators_id: create_content_creators_input
+  id: ID
+}
+
+input create_articles_content_creators_4_input {
+  articles_id: create_articles_input
+  content_creators_id: create_content_creators_input
+  id: ID
+}
+
+input create_articles_input {
+  anchor_sitemap: create_sitemap_section_links_input
+  audience: JSON
+  audience_func: count_functionsInput
+  authors: [create_articles_content_creators_2_input]
+  authors_func: count_functionsInput
+  autoupdate_anchor: Boolean
+  categories: JSON
+  categories_func: count_functionsInput
+  citations: JSON
+  citations_func: count_functionsInput
+  content: String
+  contributed_at: Date
+  contributed_at_func: datetime_functionsInput
+  contributors: [create_articles_content_creators_4_input]
+  contributors_func: count_functionsInput
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  heading: String
+  id: ID
+  image: create_directus_files_input
+  image_alt_text: String
+  is_archived: Boolean!
+  keywords: JSON
+  keywords_func: count_functionsInput
+  last_reviewed: Date
+  last_reviewed_func: datetime_functionsInput
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  publisher: create_publishers_input
+  reviewers: [create_articles_content_creators_3_input]
+  reviewers_func: count_functionsInput
+  slug: String
+  sub_heading: String
+  table_of_contents: JSON
+  table_of_contents_func: count_functionsInput
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_availability_pages_input {
+  FAQs: [create_faqs_input]
+  FAQs_func: count_functionsInput
+  about_bookphysio: String
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  id: ID
+  is_archived: Boolean
+  popular_links: [create_sitemap_section_links_input]
+  popular_links_func: count_functionsInput
+  posts: [create_posts_input]
+  posts_func: count_functionsInput
+  slug: String
+}
+
+input create_booking_pages_input {
+  FAQs: [create_faqs_input]
+  FAQs_func: count_functionsInput
+  Seo_page_links: [create_seopage_links_input]
+  Seo_page_links_func: count_functionsInput
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  h2: String
+  h3: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  posts: [create_posts_input]
+  posts_func: count_functionsInput
+  slug: String
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_cities_input {
+  Clinics: [create_clinics_input]
+  Clinics_func: count_functionsInput
+  FAQs: [create_faqs_input]
+  FAQs_func: count_functionsInput
+  Posts: [create_posts_input]
+  Posts_func: count_functionsInput
+  Seo_page_links: [create_seopage_links_input]
+  Seo_page_links_func: count_functionsInput
+  Suburbs: [create_suburbs_input]
+  Suburbs_func: count_functionsInput
+  about_bookphysio: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functionsInput
+  content_creators: [create_content_creators_input]
+  content_creators_func: count_functionsInput
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  h2: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  name: String
+  slug: String!
+  state: create_states_input
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  top_clinics: JSON
+  top_clinics_func: count_functionsInput
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_clinics_input {
+  Appointments: [create_appointments_input]
+  Appointments_func: count_functionsInput
+  about_clinic: String
+  active_appointment_types_count: Int
+  api_key: String
+  appointment_types: JSON
+  appointment_types_func: count_functionsInput
+  chargebee_customer_id: String
+  city: create_cities_input
+  clinic_booking_link: String
+  clinic_email: String
+  clinic_phone_number: String
+  clinic_practitioners: [create_clinics_practitioners_clinics_input]
+  clinic_practitioners_func: count_functionsInput
+  connected_to_provider: Boolean
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  display_for_booking: Boolean
+  full_address: String
+  has_appointment_cost: Boolean
+  id: ID
+  id_from_provider: String
+  images_data: JSON
+  images_data_func: count_functionsInput
+  invoices: [create_invoices_input]
+  invoices_func: count_functionsInput
+  is_archived: Boolean
+  is_data_valid: Boolean
+  location: JSON
+  location_func: count_functionsInput
+  logo: create_directus_files_input
+  logo_alt_text: String
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  name: String!
+
+  """Clinics that are within 5 km radius counting from clinic location"""
+  nearby_clinics: JSON
+  nearby_clinics_func: count_functionsInput
+  nearby_suburbs: JSON
+  nearby_suburbs_func: count_functionsInput
+  opening_hours: JSON
+  opening_hours_func: count_functionsInput
+  owner: create_clinics_owners_input
+  pms: String
+  popular: Boolean
+  postcode: String
+  slug: String!
+  state: create_states_input
+  suburb: create_suburbs_input
+  team_image: create_directus_files_input
+  team_image_alt_text: String
+  time_zone: String
+  typeform_registration_link: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+  use_test_chargebee: Boolean
+  validation_description: String
+  website: String
+}
+
+input create_clinics_owners_input {
+  clinics: [create_clinics_input]
+  clinics_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  email: String
+  first_name: String
+  id: ID
+  last_name: String
+  notes: String
+  phone_number: String
+  sign_up_date: Date
+  sign_up_date_func: date_functionsInput
+  title: String
+}
+
+input create_clinics_practitioners_clinics_input {
+  clinics_id: create_clinics_input
+  clinics_practitioners_id: create_clinics_practitioners_input
+  id: ID
+}
+
+input create_clinics_practitioners_input {
+  active: Boolean
+  available_for_bookings: Boolean
+  clinics: [create_clinics_practitioners_clinics_input]
+  clinics_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  first_name: String
+  gender: String
+  id: ID
+  last_name: String
+  provider_id: String
+  related_appointment_types: JSON
+  related_appointment_types_func: count_functionsInput
+  speciality: String
+  title: String
+}
+
+input create_content_creators_input {
+  accomplishments: JSON
+  accomplishments_func: count_functionsInput
+  areas_of_expertise: JSON
+  areas_of_expertise_func: count_functionsInput
+  articles_authored: [create_articles_content_creators_2_input]
+  articles_authored_func: count_functionsInput
+  articles_contributed: [create_articles_content_creators_4_input]
+  articles_contributed_func: count_functionsInput
+  articles_reviewed: [create_articles_content_creators_3_input]
+  articles_reviewed_func: count_functionsInput
+  certifications: JSON
+  certifications_func: count_functionsInput
+  city: create_cities_input
+  country: create_countries_input
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  degrees: JSON
+  degrees_func: count_functionsInput
+  h1: String
+  h2: String
+  id: ID
+  linked_in: String
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  medical_title: String
+  meta_description: String
+  meta_title: String
+  mini_description: String
+  name: String
+  profile: String
+  profile_picture: create_directus_files_input
+  publisher: create_publishers_input
+  slug: String
+  state: create_states_input
+  user_created: create_directus_users_input
+  user_updated: create_directus_users_input
+  website: String
+}
+
+input create_countries_input {
+  content_creators: [create_content_creators_input]
+  content_creators_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  id: ID
+  name: String
+  user_created: create_directus_users_input
+  user_updated: create_directus_users_input
+}
+
+input create_directus_files_input {
+  charset: String
+  description: String
+  duration: Int
+  embed: String
+  filename_disk: String
+  filename_download: String!
+  filesize: String
+  folder: create_directus_folders_input
+  height: Int
+  id: ID
+  location: String
+  metadata: JSON
+  metadata_func: count_functionsInput
+  modified_by: create_directus_users_input
+  modified_on: Date!
+  modified_on_func: datetime_functionsInput
+  storage: String!
+  tags: JSON
+  tags_func: count_functionsInput
+  title: String
+  type: String
+  uploaded_by: create_directus_users_input
+  uploaded_on: Date!
+  uploaded_on_func: datetime_functionsInput
+  width: Int
+}
+
+input create_directus_folders_input {
+  id: ID
+  name: String!
+  parent: create_directus_folders_input
+}
+
+input create_directus_roles_input {
+  admin_access: Boolean!
+  app_access: Boolean!
+  description: String
+  enforce_tfa: Boolean!
+  icon: String!
+  id: ID
+  ip_access: [String]
+  name: String!
+  users: [create_directus_users_input]
+  users_func: count_functionsInput
+}
+
+input create_directus_users_input {
+  auth_data: JSON
+  auth_data_func: count_functionsInput
+  avatar: create_directus_files_input
+  description: String
+  email: String
+  email_notifications: Boolean
+  external_identifier: String
+  first_name: String
+  id: ID
+  language: String
+  last_access: Date
+  last_access_func: datetime_functionsInput
+  last_name: String
+  last_page: String
+  location: String
+  password: String
+  provider: String!
+  role: create_directus_roles_input
+  status: String!
+  tags: JSON
+  tags_func: count_functionsInput
+  tfa_secret: String
+  theme: String
+  title: String
+  token: String
+}
+
+input create_faqs_input {
+  answer: String
+  availability_page: create_availability_pages_input
+  booking_page: create_booking_pages_input
+  city: create_cities_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  is_archived: Boolean
+  page: create_pages_input
+  question: String!
+  suburb: create_suburbs_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_i18n_locales_input {
+  code: String
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  name: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_invoices_input {
+  appointments_ids: JSON
+  appointments_ids_func: count_functionsInput
+  chargebee_id: String
+  clinic: create_clinics_input
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  id: ID
+}
+
+input create_pages_input {
+  FAQs: [create_faqs_input]
+  FAQs_func: count_functionsInput
+  about: String
+  address: JSON
+  addressCountry: String
+  address_func: count_functionsInput
+  brand: JSON
+  brand_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  description: String
+  headline: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  page_type: String
+  page_type_for_markup: String
+  publisher: create_publishers_input
+  slug: String
+}
+
+input create_posts_input {
+  availability_page: create_availability_pages_input
+  booking_page: create_booking_pages_input
+  city: create_cities_input
+  content: String
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  is_archived: Boolean
+  suburb: create_suburbs_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_publishers_input {
+  articles: [create_articles_input]
+  articles_func: count_functionsInput
+  content_creators: [create_content_creators_input]
+  content_creators_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  id: ID
+  name: String
+  profiles: JSON
+  profiles_func: count_functionsInput
+  publishing_principles: String
+  user_created: create_directus_users_input
+  user_updated: create_directus_users_input
+}
+
+input create_redirects_input {
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  from: String
+  id: ID
+  is_archived: Boolean
+  to: String
+  user_created: create_directus_users_input
+  user_updated: create_directus_users_input
+}
+
+input create_seopage_links_input {
+  booking_page: create_booking_pages_input
+  city: create_cities_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  heading: String
+  id: ID
+  is_archived: Boolean
+  link: String
+  link_text: String!
+  link_type: String
+  state: create_states_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_sitemap_page_sections_input {
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h2: String
+  id: ID
+  section_links: [create_sitemap_section_links_input]
+  section_links_func: count_functionsInput
+  sitemap_page: create_sitemap_pages_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_sitemap_pages_input {
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  id: ID
+  meta_title: String
+  page_sections: [create_sitemap_page_sections_input]
+  page_sections_func: count_functionsInput
+  slug: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_sitemap_section_links_input {
+  availability_page: create_availability_pages_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  link: String
+  link_text: String
+  sitemap_pagesection: create_sitemap_page_sections_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_states_input {
+  Cities: [create_cities_input]
+  Cities_func: count_functionsInput
+  Clinics: [create_clinics_input]
+  Clinics_func: count_functionsInput
+  Seo_page_links: [create_seopage_links_input]
+  Seo_page_links_func: count_functionsInput
+  Suburbs: [create_suburbs_input]
+  Suburbs_func: count_functionsInput
+  abbreviation: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functionsInput
+  content_creators: [create_content_creators_input]
+  content_creators_func: count_functionsInput
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  h2: String
+  h3: String
+  id: ID
+  is_archived: Boolean
+  meta_description: String
+  meta_title: String
+  profile: String
+  slug: String!
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_suburbs_input {
+  Clinics: [create_clinics_input]
+  Clinics_func: count_functionsInput
+  FAQs: [create_faqs_input]
+  FAQs_func: count_functionsInput
+  Posts: [create_posts_input]
+  Posts_func: count_functionsInput
+  about_bookphysio: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functionsInput
+  city: create_cities_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  h2: String
+  id: ID
+  is_archived: Boolean
+  location: JSON
+  location_func: count_functionsInput
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  name: String
+
+  """Clinics that are within 5 km radius counting from suburb location"""
+  nearby_clinics: JSON
+  nearby_clinics_func: count_functionsInput
+  nearby_suburbs: JSON
+  nearby_suburbs_func: count_functionsInput
+  popular: Boolean
+  postcode: String
+  slug: String!
+  state: create_states_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input create_tokens_input {
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  token: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+  user: Int
+}
+
+input create_upload_file_input {
+  alternativeText: String
+  caption: String
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  ext: String
+  formats: JSON
+  formats_func: count_functionsInput
+  hash: String!
+  height: Int
+  id: ID
+  mime: String!
+  name: String!
+  previewUrl: String
+  provider: String!
+  provider_metadata: JSON
+  provider_metadata_func: count_functionsInput
+  size: Float!
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+  url: String!
+  width: Int
+}
+
+input create_upload_file_morph_input {
+  field: String
+  id: ID
+  order: Int
+  related_id: Int
+  related_type: String
+  upload_file_id: Int
+}
+
+input date_filter_operators {
+  _eq: String
+  _gt: String
+  _gte: String
+  _lt: String
+  _lte: String
+  _neq: String
+  _nnull: Boolean
+  _null: Boolean
+}
+
+input date_function_filter_operators {
+  day: number_filter_operators
+  month: number_filter_operators
+  week: number_filter_operators
+  weekday: number_filter_operators
+  year: number_filter_operators
+}
+
+type date_functions {
+  day: Int
+  month: Int
+  week: Int
+  weekday: Int
+  year: Int
+}
+
+input date_functionsInput {
+  day: Int
+  month: Int
+  week: Int
+  weekday: Int
+  year: Int
+}
+
+input datetime_function_filter_operators {
+  day: number_filter_operators
+  hour: number_filter_operators
+  minute: number_filter_operators
+  month: number_filter_operators
+  second: number_filter_operators
+  week: number_filter_operators
+  weekday: number_filter_operators
+  year: number_filter_operators
+}
+
+type datetime_functions {
+  day: Int
+  hour: Int
+  minute: Int
+  month: Int
+  second: Int
+  week: Int
+  weekday: Int
+  year: Int
+}
+
+input datetime_functionsInput {
+  day: Int
+  hour: Int
+  minute: Int
+  month: Int
+  second: Int
+  week: Int
+  weekday: Int
+  year: Int
+}
+
+type delete_many {
+  ids: [ID]!
+}
+
+type delete_one {
+  id: ID!
+}
+
+type directus_files {
+  charset: String
+  description: String
+  duration: Int
+  embed: String
+  filename_disk: String
+  filename_download: String!
+  filesize: String
+  folder(filter: directus_folders_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_folders
+  height: Int
+  id: ID
+  location: String
+  metadata: JSON
+  metadata_func: count_functions
+  modified_by(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+  modified_on: Date!
+  modified_on_func: datetime_functions
+  storage: String!
+  tags: JSON
+  tags_func: count_functions
+  title: String
+  type: String
+  uploaded_by(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+  uploaded_on: Date!
+  uploaded_on_func: datetime_functions
+  width: Int
+}
+
+input directus_files_filter {
+  _and: [directus_files_filter]
+  _or: [directus_files_filter]
+  charset: string_filter_operators
+  description: string_filter_operators
+  duration: number_filter_operators
+  embed: string_filter_operators
+  filename_disk: string_filter_operators
+  filename_download: string_filter_operators
+  filesize: string_filter_operators
+  folder: directus_folders_filter
+  height: number_filter_operators
+  id: string_filter_operators
+  location: string_filter_operators
+  metadata: string_filter_operators
+  metadata_func: count_function_filter_operators
+  modified_by: directus_users_filter
+  modified_on: date_filter_operators
+  modified_on_func: datetime_function_filter_operators
+  storage: string_filter_operators
+  tags: string_filter_operators
+  tags_func: count_function_filter_operators
+  title: string_filter_operators
+  type: string_filter_operators
+  uploaded_by: directus_users_filter
+  uploaded_on: date_filter_operators
+  uploaded_on_func: datetime_function_filter_operators
+  width: number_filter_operators
+}
+
+type directus_folders {
+  id: ID
+  name: String!
+  parent(filter: directus_folders_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_folders
+}
+
+input directus_folders_filter {
+  _and: [directus_folders_filter]
+  _or: [directus_folders_filter]
+  id: string_filter_operators
+  name: string_filter_operators
+  parent: directus_folders_filter
+}
+
+type directus_roles {
+  admin_access: Boolean!
+  app_access: Boolean!
+  description: String
+  enforce_tfa: Boolean!
+  icon: String!
+  id: ID
+  ip_access: [String]
+  name: String!
+  users(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [directus_users]
+  users_func: count_functions
+}
+
+input directus_roles_filter {
+  _and: [directus_roles_filter]
+  _or: [directus_roles_filter]
+  admin_access: boolean_filter_operators
+  app_access: boolean_filter_operators
+  description: string_filter_operators
+  enforce_tfa: boolean_filter_operators
+  icon: string_filter_operators
+  id: string_filter_operators
+  ip_access: string_filter_operators
+  name: string_filter_operators
+  users: directus_users_filter
+  users_func: count_function_filter_operators
+}
+
+type directus_users {
+  auth_data: JSON
+  auth_data_func: count_functions
+  avatar(filter: directus_files_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_files
+  description: String
+  email: String
+  email_notifications: Boolean
+  external_identifier: String
+  first_name: String
+  id: ID
+  language: String
+  last_access: Date
+  last_access_func: datetime_functions
+  last_name: String
+  last_page: String
+  location: String
+  password: String
+  provider: String!
+  role(filter: directus_roles_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_roles
+  status: String!
+  tags: JSON
+  tags_func: count_functions
+  tfa_secret: String
+  theme: String
+  title: String
+  token: String
+}
+
+input directus_users_filter {
+  _and: [directus_users_filter]
+  _or: [directus_users_filter]
+  auth_data: string_filter_operators
+  auth_data_func: count_function_filter_operators
+  avatar: directus_files_filter
+  description: string_filter_operators
+  email: string_filter_operators
+  email_notifications: boolean_filter_operators
+  external_identifier: string_filter_operators
+  first_name: string_filter_operators
+  id: string_filter_operators
+  language: string_filter_operators
+  last_access: date_filter_operators
+  last_access_func: datetime_function_filter_operators
+  last_name: string_filter_operators
+  last_page: string_filter_operators
+  location: string_filter_operators
+  password: string_filter_operators
+  provider: string_filter_operators
+  role: directus_roles_filter
+  status: string_filter_operators
+  tags: string_filter_operators
+  tags_func: count_function_filter_operators
+  tfa_secret: string_filter_operators
+  theme: string_filter_operators
+  title: string_filter_operators
+  token: string_filter_operators
+}
+
+type faqs {
+  answer: String
+  availability_page(filter: availability_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): availability_pages
+  booking_page(filter: booking_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): booking_pages
+  city(filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): cities
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  id: ID
+  is_archived: Boolean
+  page(filter: pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): pages
+  question: String!
+  suburb(filter: suburbs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): suburbs
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type faqs_aggregated {
+  avg: faqs_aggregated_fields
+  avgDistinct: faqs_aggregated_fields
+  count: faqs_aggregated_count
+  countAll: Int
+  countDistinct: faqs_aggregated_fields
+  group: JSON
+  max: faqs_aggregated_fields
+  min: faqs_aggregated_fields
+  sum: faqs_aggregated_fields
+  sumDistinct: faqs_aggregated_fields
+}
+
+type faqs_aggregated_count {
+  answer: Int
+  availability_page: Int
+  booking_page: Int
+  city: Int
+  created_at: Int
+  created_by: Int
+  id: Int
+  is_archived: Int
+  page: Int
+  question: Int
+  suburb: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type faqs_aggregated_fields {
+  availability_page: Float
+  booking_page: Float
+  city: Float
+  created_by: Float
+  id: Float
+  page: Float
+  suburb: Float
+  updated_by: Float
+}
+
+input faqs_filter {
+  _and: [faqs_filter]
+  _or: [faqs_filter]
+  answer: string_filter_operators
+  availability_page: availability_pages_filter
+  booking_page: booking_pages_filter
+  city: cities_filter
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  page: pages_filter
+  question: string_filter_operators
+  suburb: suburbs_filter
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type i18n_locales {
+  code: String
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  id: ID
+  name: String
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type i18n_locales_aggregated {
+  avg: i18n_locales_aggregated_fields
+  avgDistinct: i18n_locales_aggregated_fields
+  count: i18n_locales_aggregated_count
+  countAll: Int
+  countDistinct: i18n_locales_aggregated_fields
+  group: JSON
+  max: i18n_locales_aggregated_fields
+  min: i18n_locales_aggregated_fields
+  sum: i18n_locales_aggregated_fields
+  sumDistinct: i18n_locales_aggregated_fields
+}
+
+type i18n_locales_aggregated_count {
+  code: Int
+  created_at: Int
+  created_by: Int
+  id: Int
+  name: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type i18n_locales_aggregated_fields {
+  created_by: Float
+  id: Float
+  updated_by: Float
+}
+
+input i18n_locales_filter {
+  _and: [i18n_locales_filter]
+  _or: [i18n_locales_filter]
+  code: string_filter_operators
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  id: number_filter_operators
+  name: string_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type invoices {
+  appointments_ids: JSON
+  appointments_ids_func: count_functions
+  chargebee_id: String
+  clinic(filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): clinics
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  id: ID
+}
+
+type invoices_aggregated {
+  avg: invoices_aggregated_fields
+  avgDistinct: invoices_aggregated_fields
+  count: invoices_aggregated_count
+  countAll: Int
+  countDistinct: invoices_aggregated_fields
+  group: JSON
+  max: invoices_aggregated_fields
+  min: invoices_aggregated_fields
+  sum: invoices_aggregated_fields
+  sumDistinct: invoices_aggregated_fields
+}
+
+type invoices_aggregated_count {
+  appointments_ids: Int
+  chargebee_id: Int
+  clinic: Int
+  date_created: Int
+  date_updated: Int
+  id: Int
+}
+
+type invoices_aggregated_fields {
+  clinic: Float
+}
+
+input invoices_filter {
+  _and: [invoices_filter]
+  _or: [invoices_filter]
+  appointments_ids: string_filter_operators
+  appointments_ids_func: count_function_filter_operators
+  chargebee_id: string_filter_operators
+  clinic: clinics_filter
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  id: string_filter_operators
+}
+
+input number_filter_operators {
+  _eq: Float
+  _gt: Float
+  _gte: Float
+  _in: [Float]
+  _lt: Float
+  _lte: Float
+  _neq: Float
+  _nin: [Float]
+  _nnull: Boolean
+  _null: Boolean
+}
+
+type pages {
+  FAQs(filter: faqs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [faqs]
+  FAQs_func: count_functions
+  about: String
+  address: JSON
+  addressCountry: String
+  address_func: count_functions
+  brand: JSON
+  brand_func: count_functions
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  description: String
+  headline: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functions
+  page_type: String
+  page_type_for_markup: String
+  publisher(filter: publishers_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): publishers
+  slug: String
+}
+
+type pages_aggregated {
+  avg: pages_aggregated_fields
+  avgDistinct: pages_aggregated_fields
+  count: pages_aggregated_count
+  countAll: Int
+  countDistinct: pages_aggregated_fields
+  group: JSON
+  max: pages_aggregated_fields
+  min: pages_aggregated_fields
+  sum: pages_aggregated_fields
+  sumDistinct: pages_aggregated_fields
+}
+
+type pages_aggregated_count {
+  FAQs: Int
+  about: Int
+  address: Int
+  addressCountry: Int
+  brand: Int
+  date_created: Int
+  date_updated: Int
+  description: Int
+  headline: Int
+  id: Int
+  is_archived: Int
+  markup_schema: Int
+  page_type: Int
+  page_type_for_markup: Int
+  publisher: Int
+  slug: Int
+}
+
+type pages_aggregated_fields {
+  id: Float
+  publisher: Float
+}
+
+input pages_filter {
+  FAQs: faqs_filter
+  FAQs_func: count_function_filter_operators
+  _and: [pages_filter]
+  _or: [pages_filter]
+  about: string_filter_operators
+  address: string_filter_operators
+  addressCountry: string_filter_operators
+  address_func: count_function_filter_operators
+  brand: string_filter_operators
+  brand_func: count_function_filter_operators
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  description: string_filter_operators
+  headline: string_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  markup_schema: string_filter_operators
+  markup_schema_func: count_function_filter_operators
+  page_type: string_filter_operators
+  page_type_for_markup: string_filter_operators
+  publisher: publishers_filter
+  slug: string_filter_operators
+}
+
+type posts {
+  availability_page(filter: availability_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): availability_pages
+  booking_page(filter: booking_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): booking_pages
+  city(filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): cities
+  content: String
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  id: ID
+  is_archived: Boolean
+  suburb(filter: suburbs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): suburbs
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type posts_aggregated {
+  avg: posts_aggregated_fields
+  avgDistinct: posts_aggregated_fields
+  count: posts_aggregated_count
+  countAll: Int
+  countDistinct: posts_aggregated_fields
+  group: JSON
+  max: posts_aggregated_fields
+  min: posts_aggregated_fields
+  sum: posts_aggregated_fields
+  sumDistinct: posts_aggregated_fields
+}
+
+type posts_aggregated_count {
+  availability_page: Int
+  booking_page: Int
+  city: Int
+  content: Int
+  created_at: Int
+  created_by: Int
+  id: Int
+  is_archived: Int
+  suburb: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type posts_aggregated_fields {
+  availability_page: Float
+  booking_page: Float
+  city: Float
+  created_by: Float
+  id: Float
+  suburb: Float
+  updated_by: Float
+}
+
+input posts_filter {
+  _and: [posts_filter]
+  _or: [posts_filter]
+  availability_page: availability_pages_filter
+  booking_page: booking_pages_filter
+  city: cities_filter
+  content: string_filter_operators
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  suburb: suburbs_filter
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type publishers {
+  articles(filter: articles_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [articles]
+  articles_func: count_functions
+  content_creators(filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [content_creators]
+  content_creators_func: count_functions
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  id: ID
+  name: String
+  profiles: JSON
+  profiles_func: count_functions
+  publishing_principles: String
+  user_created(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+  user_updated(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+}
+
+type publishers_aggregated {
+  avg: publishers_aggregated_fields
+  avgDistinct: publishers_aggregated_fields
+  count: publishers_aggregated_count
+  countAll: Int
+  countDistinct: publishers_aggregated_fields
+  group: JSON
+  max: publishers_aggregated_fields
+  min: publishers_aggregated_fields
+  sum: publishers_aggregated_fields
+  sumDistinct: publishers_aggregated_fields
+}
+
+type publishers_aggregated_count {
+  articles: Int
+  content_creators: Int
+  date_created: Int
+  date_updated: Int
+  id: Int
+  name: Int
+  profiles: Int
+  publishing_principles: Int
+  user_created: Int
+  user_updated: Int
+}
+
+type publishers_aggregated_fields {
+  id: Float
+}
+
+input publishers_filter {
+  _and: [publishers_filter]
+  _or: [publishers_filter]
+  articles: articles_filter
+  articles_func: count_function_filter_operators
+  content_creators: content_creators_filter
+  content_creators_func: count_function_filter_operators
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  id: number_filter_operators
+  name: string_filter_operators
+  profiles: string_filter_operators
+  profiles_func: count_function_filter_operators
+  publishing_principles: string_filter_operators
+  user_created: directus_users_filter
+  user_updated: directus_users_filter
+}
+
+type redirects {
+  date_created: Date
+  date_created_func: datetime_functions
+  date_updated: Date
+  date_updated_func: datetime_functions
+  from: String
+  id: ID
+  is_archived: Boolean
+  to: String
+  user_created(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+  user_updated(filter: directus_users_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): directus_users
+}
+
+type redirects_aggregated {
+  avg: redirects_aggregated_fields
+  avgDistinct: redirects_aggregated_fields
+  count: redirects_aggregated_count
+  countAll: Int
+  countDistinct: redirects_aggregated_fields
+  group: JSON
+  max: redirects_aggregated_fields
+  min: redirects_aggregated_fields
+  sum: redirects_aggregated_fields
+  sumDistinct: redirects_aggregated_fields
+}
+
+type redirects_aggregated_count {
+  date_created: Int
+  date_updated: Int
+  from: Int
+  id: Int
+  is_archived: Int
+  to: Int
+  user_created: Int
+  user_updated: Int
+}
+
+type redirects_aggregated_fields {
+  id: Float
+}
+
+input redirects_filter {
+  _and: [redirects_filter]
+  _or: [redirects_filter]
+  date_created: date_filter_operators
+  date_created_func: datetime_function_filter_operators
+  date_updated: date_filter_operators
+  date_updated_func: datetime_function_filter_operators
+  from: string_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  to: string_filter_operators
+  user_created: directus_users_filter
+  user_updated: directus_users_filter
+}
+
+type seopage_links {
+  booking_page(filter: booking_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): booking_pages
+  city(filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): cities
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  heading: String
+  id: ID
+  is_archived: Boolean
+  link: String
+  link_text: String!
+  link_type: String
+  state(filter: states_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): states
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type seopage_links_aggregated {
+  avg: seopage_links_aggregated_fields
+  avgDistinct: seopage_links_aggregated_fields
+  count: seopage_links_aggregated_count
+  countAll: Int
+  countDistinct: seopage_links_aggregated_fields
+  group: JSON
+  max: seopage_links_aggregated_fields
+  min: seopage_links_aggregated_fields
+  sum: seopage_links_aggregated_fields
+  sumDistinct: seopage_links_aggregated_fields
+}
+
+type seopage_links_aggregated_count {
+  booking_page: Int
+  city: Int
+  created_at: Int
+  created_by: Int
+  heading: Int
+  id: Int
+  is_archived: Int
+  link: Int
+  link_text: Int
+  link_type: Int
+  state: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type seopage_links_aggregated_fields {
+  booking_page: Float
+  city: Float
+  created_by: Float
+  id: Float
+  state: Float
+  updated_by: Float
+}
+
+input seopage_links_filter {
+  _and: [seopage_links_filter]
+  _or: [seopage_links_filter]
+  booking_page: booking_pages_filter
+  city: cities_filter
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  heading: string_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  link: string_filter_operators
+  link_text: string_filter_operators
+  link_type: string_filter_operators
+  state: states_filter
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type sitemap_page_sections {
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  h2: String
+  id: ID
+  section_links(filter: sitemap_section_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_section_links]
+  section_links_func: count_functions
+  sitemap_page(filter: sitemap_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): sitemap_pages
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type sitemap_page_sections_aggregated {
+  avg: sitemap_page_sections_aggregated_fields
+  avgDistinct: sitemap_page_sections_aggregated_fields
+  count: sitemap_page_sections_aggregated_count
+  countAll: Int
+  countDistinct: sitemap_page_sections_aggregated_fields
+  group: JSON
+  max: sitemap_page_sections_aggregated_fields
+  min: sitemap_page_sections_aggregated_fields
+  sum: sitemap_page_sections_aggregated_fields
+  sumDistinct: sitemap_page_sections_aggregated_fields
+}
+
+type sitemap_page_sections_aggregated_count {
+  created_at: Int
+  created_by: Int
+  h2: Int
+  id: Int
+  section_links: Int
+  sitemap_page: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type sitemap_page_sections_aggregated_fields {
+  created_by: Float
+  id: Float
+  sitemap_page: Float
+  updated_by: Float
+}
+
+input sitemap_page_sections_filter {
+  _and: [sitemap_page_sections_filter]
+  _or: [sitemap_page_sections_filter]
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  h2: string_filter_operators
+  id: number_filter_operators
+  section_links: sitemap_section_links_filter
+  section_links_func: count_function_filter_operators
+  sitemap_page: sitemap_pages_filter
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type sitemap_pages {
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  h1: String
+  id: ID
+  meta_title: String
+  page_sections(filter: sitemap_page_sections_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [sitemap_page_sections]
+  page_sections_func: count_functions
+  slug: String
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type sitemap_pages_aggregated {
+  avg: sitemap_pages_aggregated_fields
+  avgDistinct: sitemap_pages_aggregated_fields
+  count: sitemap_pages_aggregated_count
+  countAll: Int
+  countDistinct: sitemap_pages_aggregated_fields
+  group: JSON
+  max: sitemap_pages_aggregated_fields
+  min: sitemap_pages_aggregated_fields
+  sum: sitemap_pages_aggregated_fields
+  sumDistinct: sitemap_pages_aggregated_fields
+}
+
+type sitemap_pages_aggregated_count {
+  created_at: Int
+  created_by: Int
+  h1: Int
+  id: Int
+  meta_title: Int
+  page_sections: Int
+  slug: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type sitemap_pages_aggregated_fields {
+  created_by: Float
+  id: Float
+  updated_by: Float
+}
+
+input sitemap_pages_filter {
+  _and: [sitemap_pages_filter]
+  _or: [sitemap_pages_filter]
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  h1: string_filter_operators
+  id: number_filter_operators
+  meta_title: string_filter_operators
+  page_sections: sitemap_page_sections_filter
+  page_sections_func: count_function_filter_operators
+  slug: string_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type sitemap_section_links {
+  availability_page(filter: availability_pages_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): availability_pages
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  id: ID
+  link: String
+  link_text: String
+  sitemap_pagesection(filter: sitemap_page_sections_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): sitemap_page_sections
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type sitemap_section_links_aggregated {
+  avg: sitemap_section_links_aggregated_fields
+  avgDistinct: sitemap_section_links_aggregated_fields
+  count: sitemap_section_links_aggregated_count
+  countAll: Int
+  countDistinct: sitemap_section_links_aggregated_fields
+  group: JSON
+  max: sitemap_section_links_aggregated_fields
+  min: sitemap_section_links_aggregated_fields
+  sum: sitemap_section_links_aggregated_fields
+  sumDistinct: sitemap_section_links_aggregated_fields
+}
+
+type sitemap_section_links_aggregated_count {
+  availability_page: Int
+  created_at: Int
+  created_by: Int
+  id: Int
+  link: Int
+  link_text: Int
+  sitemap_pagesection: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type sitemap_section_links_aggregated_fields {
+  availability_page: Float
+  created_by: Float
+  id: Float
+  sitemap_pagesection: Float
+  updated_by: Float
+}
+
+input sitemap_section_links_filter {
+  _and: [sitemap_section_links_filter]
+  _or: [sitemap_section_links_filter]
+  availability_page: availability_pages_filter
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  id: number_filter_operators
+  link: string_filter_operators
+  link_text: string_filter_operators
+  sitemap_pagesection: sitemap_page_sections_filter
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type states {
+  Cities(filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [cities]
+  Cities_func: count_functions
+  Clinics(filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics]
+  Clinics_func: count_functions
+  Seo_page_links(filter: seopage_links_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [seopage_links]
+  Seo_page_links_func: count_functions
+  Suburbs(filter: suburbs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [suburbs]
+  Suburbs_func: count_functions
+  abbreviation: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functions
+  content_creators(filter: content_creators_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [content_creators]
+  content_creators_func: count_functions
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  h1: String
+  h2: String
+  h3: String
+  id: ID
+  is_archived: Boolean
+  meta_description: String
+  meta_title: String
+  profile: String
+  slug: String!
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type states_aggregated {
+  avg: states_aggregated_fields
+  avgDistinct: states_aggregated_fields
+  count: states_aggregated_count
+  countAll: Int
+  countDistinct: states_aggregated_fields
+  group: JSON
+  max: states_aggregated_fields
+  min: states_aggregated_fields
+  sum: states_aggregated_fields
+  sumDistinct: states_aggregated_fields
+}
+
+type states_aggregated_count {
+  Cities: Int
+  Clinics: Int
+  Seo_page_links: Int
+  Suburbs: Int
+  abbreviation: Int
+  breadcrumbs: Int
+  content_creators: Int
+  created_at: Int
+  created_by: Int
+  h1: Int
+  h2: Int
+  h3: Int
+  id: Int
+  is_archived: Int
+  meta_description: Int
+  meta_title: Int
+  profile: Int
+  slug: Int
+  sub_heading_text: Int
+  tick_1: Int
+  tick_2: Int
+  tick_3: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type states_aggregated_fields {
+  created_by: Float
+  id: Float
+  updated_by: Float
+}
+
+input states_filter {
+  Cities: cities_filter
+  Cities_func: count_function_filter_operators
+  Clinics: clinics_filter
+  Clinics_func: count_function_filter_operators
+  Seo_page_links: seopage_links_filter
+  Seo_page_links_func: count_function_filter_operators
+  Suburbs: suburbs_filter
+  Suburbs_func: count_function_filter_operators
+  _and: [states_filter]
+  _or: [states_filter]
+  abbreviation: string_filter_operators
+  breadcrumbs: string_filter_operators
+  breadcrumbs_func: count_function_filter_operators
+  content_creators: content_creators_filter
+  content_creators_func: count_function_filter_operators
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  h1: string_filter_operators
+  h2: string_filter_operators
+  h3: string_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  meta_description: string_filter_operators
+  meta_title: string_filter_operators
+  profile: string_filter_operators
+  slug: string_filter_operators
+  sub_heading_text: string_filter_operators
+  tick_1: string_filter_operators
+  tick_2: string_filter_operators
+  tick_3: string_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+input string_filter_operators {
+  _contains: String
+  _empty: Boolean
+  _ends_with: String
+  _eq: String
+  _in: [String]
+  _ncontains: String
+  _nempty: Boolean
+  _nends_with: String
+  _neq: String
+  _nin: [String]
+  _nnull: Boolean
+  _nstarts_with: String
+  _null: Boolean
+  _starts_with: String
+}
+
+type suburbs {
+  Clinics(filter: clinics_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [clinics]
+  Clinics_func: count_functions
+  FAQs(filter: faqs_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [faqs]
+  FAQs_func: count_functions
+  Posts(filter: posts_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): [posts]
+  Posts_func: count_functions
+  about_bookphysio: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functions
+  city(filter: cities_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): cities
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  h1: String
+  h2: String
+  id: ID
+  is_archived: Boolean
+  location: JSON
+  location_func: count_functions
+  markup_schema: JSON
+  markup_schema_func: count_functions
+  meta_description: String
+  meta_title: String
+  name: String
+
+  """Clinics that are within 5 km radius counting from suburb location"""
+  nearby_clinics: JSON
+  nearby_clinics_func: count_functions
+  nearby_suburbs: JSON
+  nearby_suburbs_func: count_functions
+  popular: Boolean
+  postcode: String
+  slug: String!
+  state(filter: states_filter, limit: Int, offset: Int, page: Int, search: String, sort: [String]): states
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+}
+
+type suburbs_aggregated {
+  avg: suburbs_aggregated_fields
+  avgDistinct: suburbs_aggregated_fields
+  count: suburbs_aggregated_count
+  countAll: Int
+  countDistinct: suburbs_aggregated_fields
+  group: JSON
+  max: suburbs_aggregated_fields
+  min: suburbs_aggregated_fields
+  sum: suburbs_aggregated_fields
+  sumDistinct: suburbs_aggregated_fields
+}
+
+type suburbs_aggregated_count {
+  Clinics: Int
+  FAQs: Int
+  Posts: Int
+  about_bookphysio: Int
+  breadcrumbs: Int
+  city: Int
+  created_at: Int
+  created_by: Int
+  h1: Int
+  h2: Int
+  id: Int
+  is_archived: Int
+  location: Int
+  markup_schema: Int
+  meta_description: Int
+  meta_title: Int
+  name: Int
+
+  """Clinics that are within 5 km radius counting from suburb location"""
+  nearby_clinics: Int
+  nearby_suburbs: Int
+  popular: Int
+  postcode: Int
+  slug: Int
+  state: Int
+  updated_at: Int
+  updated_by: Int
+}
+
+type suburbs_aggregated_fields {
+  city: Float
+  created_by: Float
+  id: Float
+  state: Float
+  updated_by: Float
+}
+
+input suburbs_filter {
+  Clinics: clinics_filter
+  Clinics_func: count_function_filter_operators
+  FAQs: faqs_filter
+  FAQs_func: count_function_filter_operators
+  Posts: posts_filter
+  Posts_func: count_function_filter_operators
+  _and: [suburbs_filter]
+  _or: [suburbs_filter]
+  about_bookphysio: string_filter_operators
+  breadcrumbs: string_filter_operators
+  breadcrumbs_func: count_function_filter_operators
+  city: cities_filter
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  h1: string_filter_operators
+  h2: string_filter_operators
+  id: number_filter_operators
+  is_archived: boolean_filter_operators
+  location: string_filter_operators
+  location_func: count_function_filter_operators
+  markup_schema: string_filter_operators
+  markup_schema_func: count_function_filter_operators
+  meta_description: string_filter_operators
+  meta_title: string_filter_operators
+  name: string_filter_operators
+  nearby_clinics: string_filter_operators
+  nearby_clinics_func: count_function_filter_operators
+  nearby_suburbs: string_filter_operators
+  nearby_suburbs_func: count_function_filter_operators
+  popular: boolean_filter_operators
+  postcode: string_filter_operators
+  slug: string_filter_operators
+  state: states_filter
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+}
+
+type tokens {
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  id: ID
+  token: String
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+  user: Int
+}
+
+type tokens_aggregated {
+  avg: tokens_aggregated_fields
+  avgDistinct: tokens_aggregated_fields
+  count: tokens_aggregated_count
+  countAll: Int
+  countDistinct: tokens_aggregated_fields
+  group: JSON
+  max: tokens_aggregated_fields
+  min: tokens_aggregated_fields
+  sum: tokens_aggregated_fields
+  sumDistinct: tokens_aggregated_fields
+}
+
+type tokens_aggregated_count {
+  created_at: Int
+  created_by: Int
+  id: Int
+  token: Int
+  updated_at: Int
+  updated_by: Int
+  user: Int
+}
+
+type tokens_aggregated_fields {
+  created_by: Float
+  id: Float
+  updated_by: Float
+  user: Float
+}
+
+input tokens_filter {
+  _and: [tokens_filter]
+  _or: [tokens_filter]
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  id: number_filter_operators
+  token: string_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+  user: number_filter_operators
+}
+
+input update_appointments_input {
+  cancelled: String
+  clinic: update_clinics_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  did_not_arrive: Boolean
+  ends_at: Date
+  ends_at_func: datetime_functionsInput
+  existing_patient: Boolean
+  id: ID
+  patient: String
+  provider: String
+  provider_data: String
+  starts_at: Date
+  starts_at_func: datetime_functionsInput
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_articles_content_creators_2_input {
+  articles_id: update_articles_input
+  content_creators_id: update_content_creators_input
+  id: ID
+}
+
+input update_articles_content_creators_3_input {
+  articles_id: update_articles_input
+  content_creators_id: update_content_creators_input
+  id: ID
+}
+
+input update_articles_content_creators_4_input {
+  articles_id: update_articles_input
+  content_creators_id: update_content_creators_input
+  id: ID
+}
+
+input update_articles_input {
+  anchor_sitemap: update_sitemap_section_links_input
+  audience: JSON
+  audience_func: count_functionsInput
+  authors: [update_articles_content_creators_2_input]
+  authors_func: count_functionsInput
+  autoupdate_anchor: Boolean
+  categories: JSON
+  categories_func: count_functionsInput
+  citations: JSON
+  citations_func: count_functionsInput
+  content: String
+  contributed_at: Date
+  contributed_at_func: datetime_functionsInput
+  contributors: [update_articles_content_creators_4_input]
+  contributors_func: count_functionsInput
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  heading: String
+  id: ID
+  image: update_directus_files_input
+  image_alt_text: String
+  is_archived: Boolean
+  keywords: JSON
+  keywords_func: count_functionsInput
+  last_reviewed: Date
+  last_reviewed_func: datetime_functionsInput
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  publisher: update_publishers_input
+  reviewers: [update_articles_content_creators_3_input]
+  reviewers_func: count_functionsInput
+  slug: String
+  sub_heading: String
+  table_of_contents: JSON
+  table_of_contents_func: count_functionsInput
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_availability_pages_input {
+  FAQs: [update_faqs_input]
+  FAQs_func: count_functionsInput
+  about_bookphysio: String
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  id: ID
+  is_archived: Boolean
+  popular_links: [update_sitemap_section_links_input]
+  popular_links_func: count_functionsInput
+  posts: [update_posts_input]
+  posts_func: count_functionsInput
+  slug: String
+}
+
+input update_booking_pages_input {
+  FAQs: [update_faqs_input]
+  FAQs_func: count_functionsInput
+  Seo_page_links: [update_seopage_links_input]
+  Seo_page_links_func: count_functionsInput
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  h2: String
+  h3: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  posts: [update_posts_input]
+  posts_func: count_functionsInput
+  slug: String
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_cities_input {
+  Clinics: [update_clinics_input]
+  Clinics_func: count_functionsInput
+  FAQs: [update_faqs_input]
+  FAQs_func: count_functionsInput
+  Posts: [update_posts_input]
+  Posts_func: count_functionsInput
+  Seo_page_links: [update_seopage_links_input]
+  Seo_page_links_func: count_functionsInput
+  Suburbs: [update_suburbs_input]
+  Suburbs_func: count_functionsInput
+  about_bookphysio: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functionsInput
+  content_creators: [update_content_creators_input]
+  content_creators_func: count_functionsInput
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  h2: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  name: String
+  slug: String
+  state: update_states_input
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  top_clinics: JSON
+  top_clinics_func: count_functionsInput
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_clinics_input {
+  Appointments: [update_appointments_input]
+  Appointments_func: count_functionsInput
+  about_clinic: String
+  active_appointment_types_count: Int
+  api_key: String
+  appointment_types: JSON
+  appointment_types_func: count_functionsInput
+  chargebee_customer_id: String
+  city: update_cities_input
+  clinic_booking_link: String
+  clinic_email: String
+  clinic_phone_number: String
+  clinic_practitioners: [update_clinics_practitioners_clinics_input]
+  clinic_practitioners_func: count_functionsInput
+  connected_to_provider: Boolean
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  display_for_booking: Boolean
+  full_address: String
+  has_appointment_cost: Boolean
+  id: ID
+  id_from_provider: String
+  images_data: JSON
+  images_data_func: count_functionsInput
+  invoices: [update_invoices_input]
+  invoices_func: count_functionsInput
+  is_archived: Boolean
+  is_data_valid: Boolean
+  location: JSON
+  location_func: count_functionsInput
+  logo: update_directus_files_input
+  logo_alt_text: String
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  name: String
+
+  """Clinics that are within 5 km radius counting from clinic location"""
+  nearby_clinics: JSON
+  nearby_clinics_func: count_functionsInput
+  nearby_suburbs: JSON
+  nearby_suburbs_func: count_functionsInput
+  opening_hours: JSON
+  opening_hours_func: count_functionsInput
+  owner: update_clinics_owners_input
+  pms: String
+  popular: Boolean
+  postcode: String
+  slug: String
+  state: update_states_input
+  suburb: update_suburbs_input
+  team_image: update_directus_files_input
+  team_image_alt_text: String
+  time_zone: String
+  typeform_registration_link: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+  use_test_chargebee: Boolean
+  validation_description: String
+  website: String
+}
+
+input update_clinics_owners_input {
+  clinics: [update_clinics_input]
+  clinics_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  email: String
+  first_name: String
+  id: ID
+  last_name: String
+  notes: String
+  phone_number: String
+  sign_up_date: Date
+  sign_up_date_func: date_functionsInput
+  title: String
+}
+
+input update_clinics_practitioners_clinics_input {
+  clinics_id: update_clinics_input
+  clinics_practitioners_id: update_clinics_practitioners_input
+  id: ID
+}
+
+input update_clinics_practitioners_input {
+  active: Boolean
+  available_for_bookings: Boolean
+  clinics: [update_clinics_practitioners_clinics_input]
+  clinics_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  first_name: String
+  gender: String
+  id: ID
+  last_name: String
+  provider_id: String
+  related_appointment_types: JSON
+  related_appointment_types_func: count_functionsInput
+  speciality: String
+  title: String
+}
+
+input update_content_creators_input {
+  accomplishments: JSON
+  accomplishments_func: count_functionsInput
+  areas_of_expertise: JSON
+  areas_of_expertise_func: count_functionsInput
+  articles_authored: [update_articles_content_creators_2_input]
+  articles_authored_func: count_functionsInput
+  articles_contributed: [update_articles_content_creators_4_input]
+  articles_contributed_func: count_functionsInput
+  articles_reviewed: [update_articles_content_creators_3_input]
+  articles_reviewed_func: count_functionsInput
+  certifications: JSON
+  certifications_func: count_functionsInput
+  city: update_cities_input
+  country: update_countries_input
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  degrees: JSON
+  degrees_func: count_functionsInput
+  h1: String
+  h2: String
+  id: ID
+  linked_in: String
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  medical_title: String
+  meta_description: String
+  meta_title: String
+  mini_description: String
+  name: String
+  profile: String
+  profile_picture: update_directus_files_input
+  publisher: update_publishers_input
+  slug: String
+  state: update_states_input
+  user_created: update_directus_users_input
+  user_updated: update_directus_users_input
+  website: String
+}
+
+input update_countries_input {
+  content_creators: [update_content_creators_input]
+  content_creators_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  id: ID
+  name: String
+  user_created: update_directus_users_input
+  user_updated: update_directus_users_input
+}
+
+input update_directus_files_input {
+  charset: String
+  description: String
+  duration: Int
+  embed: String
+  filename_disk: String
+  filename_download: String
+  filesize: String
+  folder: update_directus_folders_input
+  height: Int
+  id: ID
+  location: String
+  metadata: JSON
+  metadata_func: count_functionsInput
+  modified_by: update_directus_users_input
+  modified_on: Date
+  modified_on_func: datetime_functionsInput
+  storage: String
+  tags: JSON
+  tags_func: count_functionsInput
+  title: String
+  type: String
+  uploaded_by: update_directus_users_input
+  uploaded_on: Date
+  uploaded_on_func: datetime_functionsInput
+  width: Int
+}
+
+input update_directus_folders_input {
+  id: ID
+  name: String
+  parent: update_directus_folders_input
+}
+
+input update_directus_roles_input {
+  admin_access: Boolean
+  app_access: Boolean
+  description: String
+  enforce_tfa: Boolean
+  icon: String
+  id: ID
+  ip_access: [String]
+  name: String
+  users: [update_directus_users_input]
+  users_func: count_functionsInput
+}
+
+input update_directus_users_input {
+  auth_data: JSON
+  auth_data_func: count_functionsInput
+  avatar: update_directus_files_input
+  description: String
+  email: String
+  email_notifications: Boolean
+  external_identifier: String
+  first_name: String
+  id: ID
+  language: String
+  last_access: Date
+  last_access_func: datetime_functionsInput
+  last_name: String
+  last_page: String
+  location: String
+  password: String
+  provider: String
+  role: update_directus_roles_input
+  status: String
+  tags: JSON
+  tags_func: count_functionsInput
+  tfa_secret: String
+  theme: String
+  title: String
+  token: String
+}
+
+input update_faqs_input {
+  answer: String
+  availability_page: update_availability_pages_input
+  booking_page: update_booking_pages_input
+  city: update_cities_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  is_archived: Boolean
+  page: update_pages_input
+  question: String
+  suburb: update_suburbs_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_i18n_locales_input {
+  code: String
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  name: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_invoices_input {
+  appointments_ids: JSON
+  appointments_ids_func: count_functionsInput
+  chargebee_id: String
+  clinic: update_clinics_input
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  id: ID
+}
+
+input update_pages_input {
+  FAQs: [update_faqs_input]
+  FAQs_func: count_functionsInput
+  about: String
+  address: JSON
+  addressCountry: String
+  address_func: count_functionsInput
+  brand: JSON
+  brand_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  description: String
+  headline: String
+  id: ID
+  is_archived: Boolean
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  page_type: String
+  page_type_for_markup: String
+  publisher: update_publishers_input
+  slug: String
+}
+
+input update_posts_input {
+  availability_page: update_availability_pages_input
+  booking_page: update_booking_pages_input
+  city: update_cities_input
+  content: String
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  is_archived: Boolean
+  suburb: update_suburbs_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_publishers_input {
+  articles: [update_articles_input]
+  articles_func: count_functionsInput
+  content_creators: [update_content_creators_input]
+  content_creators_func: count_functionsInput
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  id: ID
+  name: String
+  profiles: JSON
+  profiles_func: count_functionsInput
+  publishing_principles: String
+  user_created: update_directus_users_input
+  user_updated: update_directus_users_input
+}
+
+input update_redirects_input {
+  date_created: Date
+  date_created_func: datetime_functionsInput
+  date_updated: Date
+  date_updated_func: datetime_functionsInput
+  from: String
+  id: ID
+  is_archived: Boolean
+  to: String
+  user_created: update_directus_users_input
+  user_updated: update_directus_users_input
+}
+
+input update_seopage_links_input {
+  booking_page: update_booking_pages_input
+  city: update_cities_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  heading: String
+  id: ID
+  is_archived: Boolean
+  link: String
+  link_text: String
+  link_type: String
+  state: update_states_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_sitemap_page_sections_input {
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h2: String
+  id: ID
+  section_links: [update_sitemap_section_links_input]
+  section_links_func: count_functionsInput
+  sitemap_page: update_sitemap_pages_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_sitemap_pages_input {
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  id: ID
+  meta_title: String
+  page_sections: [update_sitemap_page_sections_input]
+  page_sections_func: count_functionsInput
+  slug: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_sitemap_section_links_input {
+  availability_page: update_availability_pages_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  link: String
+  link_text: String
+  sitemap_pagesection: update_sitemap_page_sections_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_states_input {
+  Cities: [update_cities_input]
+  Cities_func: count_functionsInput
+  Clinics: [update_clinics_input]
+  Clinics_func: count_functionsInput
+  Seo_page_links: [update_seopage_links_input]
+  Seo_page_links_func: count_functionsInput
+  Suburbs: [update_suburbs_input]
+  Suburbs_func: count_functionsInput
+  abbreviation: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functionsInput
+  content_creators: [update_content_creators_input]
+  content_creators_func: count_functionsInput
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  h2: String
+  h3: String
+  id: ID
+  is_archived: Boolean
+  meta_description: String
+  meta_title: String
+  profile: String
+  slug: String
+  sub_heading_text: String
+  tick_1: String
+  tick_2: String
+  tick_3: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_suburbs_input {
+  Clinics: [update_clinics_input]
+  Clinics_func: count_functionsInput
+  FAQs: [update_faqs_input]
+  FAQs_func: count_functionsInput
+  Posts: [update_posts_input]
+  Posts_func: count_functionsInput
+  about_bookphysio: String
+  breadcrumbs: JSON
+  breadcrumbs_func: count_functionsInput
+  city: update_cities_input
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  h1: String
+  h2: String
+  id: ID
+  is_archived: Boolean
+  location: JSON
+  location_func: count_functionsInput
+  markup_schema: JSON
+  markup_schema_func: count_functionsInput
+  meta_description: String
+  meta_title: String
+  name: String
+
+  """Clinics that are within 5 km radius counting from suburb location"""
+  nearby_clinics: JSON
+  nearby_clinics_func: count_functionsInput
+  nearby_suburbs: JSON
+  nearby_suburbs_func: count_functionsInput
+  popular: Boolean
+  postcode: String
+  slug: String
+  state: update_states_input
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+}
+
+input update_tokens_input {
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  id: ID
+  token: String
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+  user: Int
+}
+
+input update_upload_file_input {
+  alternativeText: String
+  caption: String
+  created_at: Date
+  created_at_func: datetime_functionsInput
+  created_by: Int
+  ext: String
+  formats: JSON
+  formats_func: count_functionsInput
+  hash: String
+  height: Int
+  id: ID
+  mime: String
+  name: String
+  previewUrl: String
+  provider: String
+  provider_metadata: JSON
+  provider_metadata_func: count_functionsInput
+  size: Float
+  updated_at: Date
+  updated_at_func: datetime_functionsInput
+  updated_by: Int
+  url: String
+  width: Int
+}
+
+input update_upload_file_morph_input {
+  field: String
+  id: ID
+  order: Int
+  related_id: Int
+  related_type: String
+  upload_file_id: Int
+}
+
+type upload_file {
+  alternativeText: String
+  caption: String
+  created_at: Date
+  created_at_func: datetime_functions
+  created_by: Int
+  ext: String
+  formats: JSON
+  formats_func: count_functions
+  hash: String!
+  height: Int
+  id: ID
+  mime: String!
+  name: String!
+  previewUrl: String
+  provider: String!
+  provider_metadata: JSON
+  provider_metadata_func: count_functions
+  size: Float!
+  updated_at: Date
+  updated_at_func: datetime_functions
+  updated_by: Int
+  url: String!
+  width: Int
+}
+
+type upload_file_aggregated {
+  avg: upload_file_aggregated_fields
+  avgDistinct: upload_file_aggregated_fields
+  count: upload_file_aggregated_count
+  countAll: Int
+  countDistinct: upload_file_aggregated_fields
+  group: JSON
+  max: upload_file_aggregated_fields
+  min: upload_file_aggregated_fields
+  sum: upload_file_aggregated_fields
+  sumDistinct: upload_file_aggregated_fields
+}
+
+type upload_file_aggregated_count {
+  alternativeText: Int
+  caption: Int
+  created_at: Int
+  created_by: Int
+  ext: Int
+  formats: Int
+  hash: Int
+  height: Int
+  id: Int
+  mime: Int
+  name: Int
+  previewUrl: Int
+  provider: Int
+  provider_metadata: Int
+  size: Int
+  updated_at: Int
+  updated_by: Int
+  url: Int
+  width: Int
+}
+
+type upload_file_aggregated_fields {
+  created_by: Float
+  height: Float
+  id: Float
+  size: Float
+  updated_by: Float
+  width: Float
+}
+
+input upload_file_filter {
+  _and: [upload_file_filter]
+  _or: [upload_file_filter]
+  alternativeText: string_filter_operators
+  caption: string_filter_operators
+  created_at: date_filter_operators
+  created_at_func: datetime_function_filter_operators
+  created_by: number_filter_operators
+  ext: string_filter_operators
+  formats: string_filter_operators
+  formats_func: count_function_filter_operators
+  hash: string_filter_operators
+  height: number_filter_operators
+  id: number_filter_operators
+  mime: string_filter_operators
+  name: string_filter_operators
+  previewUrl: string_filter_operators
+  provider: string_filter_operators
+  provider_metadata: string_filter_operators
+  provider_metadata_func: count_function_filter_operators
+  size: number_filter_operators
+  updated_at: date_filter_operators
+  updated_at_func: datetime_function_filter_operators
+  updated_by: number_filter_operators
+  url: string_filter_operators
+  width: number_filter_operators
+}
+
+type upload_file_morph {
+  field: String
+  id: ID
+  order: Int
+  related_id: Int
+  related_type: String
+  upload_file_id: Int
+}
+
+type upload_file_morph_aggregated {
+  avg: upload_file_morph_aggregated_fields
+  avgDistinct: upload_file_morph_aggregated_fields
+  count: upload_file_morph_aggregated_count
+  countAll: Int
+  countDistinct: upload_file_morph_aggregated_fields
+  group: JSON
+  max: upload_file_morph_aggregated_fields
+  min: upload_file_morph_aggregated_fields
+  sum: upload_file_morph_aggregated_fields
+  sumDistinct: upload_file_morph_aggregated_fields
+}
+
+type upload_file_morph_aggregated_count {
+  field: Int
+  id: Int
+  order: Int
+  related_id: Int
+  related_type: Int
+  upload_file_id: Int
+}
+
+type upload_file_morph_aggregated_fields {
+  id: Float
+  order: Float
+  related_id: Float
+  upload_file_id: Float
+}
+
+input upload_file_morph_filter {
+  _and: [upload_file_morph_filter]
+  _or: [upload_file_morph_filter]
+  field: string_filter_operators
+  id: number_filter_operators
+  order: number_filter_operators
+  related_id: number_filter_operators
+  related_type: string_filter_operators
+  upload_file_id: number_filter_operators
+}
